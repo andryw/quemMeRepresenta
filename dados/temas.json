@@ -1,47 +1,77 @@
 [
   {
-    "Tema":"Coincidência reeleição"
+    "Tema":"Coincidência reeleição",
+    "Pergunta":"coincidência da reeleição?",
+    "descr":"coincidência da reeleição?"
   },
   {
-    "Tema":"Cota para mulheres legislativo"
+    "Tema":"Cota para mulheres legislativo",
+    "Pergunta":"cota para mulheres no legislativo?",
+    "descr":"O texto previa uma espécie de reserva de vagas para as mulheres nas próximas três legislaturas. Na primeira delas, de 10% do total de cadeiras na Câmara dos Deputados, nas assembleias legislativas estaduais, nas câmaras de vereadores e na Câmara Legislativa do Distrito Federal. Na segunda legislatura, o percentual subiria para 12% e, na terceira, para 15%."
   },
   {
-    "Tema":"Distritao"
+    "Tema":"Distritao",
+    "Pergunta":"sistema de voto conhecido por Distritão?",
+    "descr":"Neste sistema, Estados e o Distrito Federal são transformados em distritos eleitorais e os candidatos eleitos são aqueles que conseguem o maior número de votos em cada distrito."
   },
   {
-    "Tema":"Financiamento privado para partidos"
+    "Tema":"Financiamento privado para partidos",
+    "Pergunta":"financiamento privado de campanhas para partidos políticos?",
+    "descr":"financiamento privado de campanhas para partidos políticos?"
   },
   {
-    "Tema":"Financiamento privado para partidos e candidatos"
+    "Tema":"Financiamento privado para partidos e candidatos",
+    "Pergunta":"financiamento privado de campanhas para partidos políticos e candidatos?",
+    "descr":"financiamento privado de campanhas para partidos políticos e candidatos?"
   },
   {
-    "Tema":"Maioridade 1"
+    "Tema":"Maioridade 1",
+    "Pergunta":"redução da maioridade penal (primeira votação)?",
+    "descr":"Crimes hediondos (como estupro), homicídio doloso, lesão corporal grave ou lesão corporal seguida de morte, tráfico de drogas e roubo qualificado"
   },
   {
-    "Tema":"Maioridade 2"
+    "Tema":"Maioridade 2",
+    "Pergunta":"redução da maioridade penal (segunda votação - excluindo tráfico de drogas e roubo qualificado)?",
+    "descr":"Crimes hediondos, homicídio doloso e lesão corporal seguida de morte?"
   },
   {
-    "Tema":"Pensão"
+    "Tema":"Pensão",
+    "Pergunta":"restrição acesso a pensão por morte?",
+    "descr":"Pelo texto aprovado, os cônjuges só poderão requerer pensão por morte do companheiro se o tempo de união estável ou casamento for de mais de dois anos e o segurado tiver contribuído para o INSS por, no mínimo, um ano e meio."
   },
   {
-    "Tema":"Reeleição"
+    "Tema":"Reeleição",
+    "Pergunta":"fim da reeleição para cargos executivos?",
+    "descr":"Fim da reeleição para presidente da República, governador e prefeito"
   },
   {
-    "Tema":"Seguro Desemprego"
+    "Tema":"Seguro Desemprego",
+    "Pergunta":"endurecimento das regras de acesso ao seguro-desemprego, ao abono salarial e ao seguro-defeso?",
+    "descr":"Endurecimento das regras de acesso ao seguro-desemprego, ao abono salarial e ao seguro-defeso?"
   },
   {
-    "Tema":"Tempo Mandato"
+    "Tema":"Tempo Mandato",
+    "Pergunta":"tempo de mandato do executivo ser de 5 anos?",
+    "descr":"5 anos"
   },
   {
-    "Tema":"Terceirização"
+    "Tema":"Terceirização",
+    "Pergunta":"emenda da terceirização?",
+    "descr":"Qualquer atividade pode ser terceirizada?"
   },
   {
-    "Tema":"Transgênico"
+    "Tema":"Transgênico",
+    "Pergunta":"lei que aprova retirada de avisos de produtos transgênicos?",
+    "descr":""
   },
   {
-    "Tema":"Voto Facultativo"
+    "Tema":"Voto Facultativo",
+    "Pergunta":"voto facultativo?",
+    "descr":""
   },
   {
-    "Tema":"Voto impresso"
+    "Tema":"Voto impresso",
+    "Pergunta":"voto impresso?",
+    "descr":""
   }
 ]
