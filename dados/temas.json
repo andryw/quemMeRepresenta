@@ -11,7 +11,7 @@
   },
   {
     "Tema":"Distritao",
-    "Pergunta":"sistema de voto conhecido por Distritão?",
+    "Pergunta":"sistema de voto Distritão?",
     "descr":"Neste sistema, Estados e o Distrito Federal são transformados em distritos eleitorais e os candidatos eleitos são aqueles que conseguem o maior número de votos em cada distrito."
   },
   {
@@ -26,7 +26,7 @@
   },
   {
     "Tema":"Maioridade 1",
-    "Pergunta":"redução da maioridade penal (primeira votação)?",
+    "Pergunta":"redução da maioridade penal (primeira votação - crimes graves)?",
     "descr":"Crimes hediondos (como estupro), homicídio doloso, lesão corporal grave ou lesão corporal seguida de morte, tráfico de drogas e roubo qualificado"
   },
   {
@@ -36,7 +36,7 @@
   },
   {
     "Tema":"Pensão",
-    "Pergunta":"restrição acesso a pensão por morte?",
+    "Pergunta":"restrição do acesso à pensão por morte?",
     "descr":"Pelo texto aprovado, os cônjuges só poderão requerer pensão por morte do companheiro se o tempo de união estável ou casamento for de mais de dois anos e o segurado tiver contribuído para o INSS por, no mínimo, um ano e meio."
   },
   {
@@ -46,7 +46,7 @@
   },
   {
     "Tema":"Seguro Desemprego",
-    "Pergunta":"endurecimento das regras de acesso ao seguro-desemprego, ao abono salarial e ao seguro-defeso?",
+    "Pergunta":"endurecimento das regras de acesso ao seguro-desemprego (e outros)?",
     "descr":"Endurecimento das regras de acesso ao seguro-desemprego, ao abono salarial e ao seguro-defeso?"
   },
   {
@@ -61,7 +61,7 @@
   },
   {
     "Tema":"Transgênico",
-    "Pergunta":"lei que aprova retirada de avisos de produtos transgênicos?",
+    "Pergunta":"retirada de avisos de produtos transgênicos?",
     "descr":""
   },
   {
