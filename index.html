@@ -68,7 +68,24 @@
     </nav>
 
     <!-- Header -->
-    <section id="deputados_section">
+    <header>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+
+                <h2>Quem me representa?</h2>
+                <h5>Saiba quais deputados se parecem com você de acordo com as votações da câmara.
+                Dê sua opinião nos temas listados e os deputados serão ordenados pela semelhança com a sua opinião dada.
+                </h5>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!--<section id="deputados_section" style="background-color: #0a4b3e">-->
+
+    <section id="deputados_section" style="background-color: #0a4b3e">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
@@ -150,7 +167,7 @@
 
                             <div class="col-lg-8 text-left" ng-if="deputado.score >= 0">
                                 <progressbar value="deputado.score" type="{{typeProgessBar(deputado.score)}}"
-                                             popover="{{iguais(deputado)}}" popover-trigger="mouseenter">
+                                             tooltip-html-unsafe="{{iguais(deputado) + '<br /><br />' + diferentes(deputado)}}" popover-trigger="mouseenter">
                                     <span style="color:black; white-space:nowrap;">
                                     {{deputado.score | number : 2 }}%</span></progressbar>
                             </div>
