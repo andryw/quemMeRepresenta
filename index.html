@@ -139,7 +139,7 @@
 
                     <div class="list-group">
                         <!--<d3-bars data="deputadosDaParada" label="nome" on-click="d3OnClick(item)"></d3-bars>-->
-                        <div class="row" ng-repeat="deputado in deputadosDaParada | orderBy:['-score','partido','nome'] | filter:estadoSelecionado">
+                        <div class="row" ng-repeat="deputado in deputados | orderBy:['-score','partido','nome'] | filter:estadoSelecionado">
 
                             <div class="col-lg-4 text-left">
 
@@ -149,7 +149,9 @@
                             </div>
 
                             <div class="col-lg-8 text-left" ng-if="deputado.score >= 0">
-                                <progressbar value="deputado.score" type="{{typeProgessBar(deputado.score)}}"><span style="color:black; white-space:nowrap;">
+                                <progressbar value="deputado.score" type="{{typeProgessBar(deputado.score)}}"
+                                             popover="{{iguais(deputado)}}" popover-trigger="mouseenter">
+                                    <span style="color:black; white-space:nowrap;">
                                     {{deputado.score | number : 2 }}%</span></progressbar>
                             </div>
                             <div class="col-lg-8 text-left" ng-if="deputado.score < 0" style="padding-bottom:10px">
