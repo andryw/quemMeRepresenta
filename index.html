@@ -146,20 +146,30 @@
 
                     <div class="list-group">
                         <!--<d3-bars data="deputadosDaParada" label="nome" on-click="d3OnClick(item)"></d3-bars>-->
-                        <div class="list-group-item-text" ng-repeat="deputado in deputadosDaParada | orderBy:['-score','partido','nome'] | filter:estadoSelecionado">
+                        <div class="row" ng-repeat="deputado in deputadosDaParada | orderBy:['-score','partido','nome'] | filter:estadoSelecionado">
 
-                        <div class="col-lg-4">
+                            <div class="col-lg-4 text-left">
 
-                            <span class="badge">{{deputado.partido}}/{{deputado.uf}}</span>
-                            {{deputado.nome}}
+                                <span class="badge">{{deputado.partido}}/{{deputado.uf}}</span>
+                                {{deputado.nome}}
+
+                            </div>
+
+                            <div class="col-lg-8 text-left" ng-if="deputado.score >= 0">
+                                <progressbar value="deputado.score"><span style="color:black; white-space:nowrap;">
+                                    {{deputado.score | number : 2 }}%</span></progressbar>
+                            </div>
+                            <div class="col-lg-8 text-left" ng-if="deputado.score < 0" style="padding-bottom:10px">
+                                <span class="badge progress-bar-danger" tooltip="{{tooltip_semvalor}}"
+                                      ng-if="deputado.nome != 'Eduardo Cunha'">Sem Valor</span>
+                                <span class="badge progress-bar-danger" tooltip="{{tooltip_art17}}"
+                                      ng-if="deputado.nome == 'Eduardo Cunha'">Art. 17</span>
+
+                            </div>
 
                         </div>
-                        <div class="col-lg-8">
-                            <progressbar value="deputado.score"><span style="color:black; white-space:nowrap;">{{deputado.score | number : 2 }}%</span></progressbar>
-                        </div>
-                        </div>
-                        </div>
 
+                        </div>
 
                     </div>
 
