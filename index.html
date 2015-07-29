@@ -72,80 +72,127 @@
     <!-- Header -->
     <header>
         <div class="container">
+
+
+
+
             <div class="row">
+                <div class="col-lg-4">
+                    <div class="row">
+                        <p>
+                            <button class="btn btn-default" ng-click="status = !status">Toggle last panel</button>
+                        </p>
 
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3" ng-controller="VotacoesCtrl">
+                        <div collapse="status">
 
-                    </div>
-                </div>
-
-                <div class="col-lg-5">
-                    <div class="intro-text">
-                        <span class="name">Temas</span>
-                    </div>
-                    <h2>Você é a favor de(a)</h2>
-
-                    <div>
-
-                        <div ng-repeat="tema in temas" >
-                            <div class="row">
-                                <div class="col-lg-6">
-
-                                    <label>
-                                        {{tema.Pergunta}}
-                                    </label>
+                            <div class="col-lg-12">
+                                <div class="intro-text">
+                                    <h2>Você é a favor de(a)</h2>
                                 </div>
-                                <div class="col-lg-6">
 
-                                    <div class="btn-group" role="group" id="tema-{{$index}}" >
+                                <div>
 
-                                        <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Sim'" ng-click="click(tema,'s')">
-                                            Sim</label>
-                                        <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Não'" ng-click="click(tema,'n')">
-                                            Não</label>
-                                        <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Não sei'" ng-click="click(tema,'ns')">
-                                            Não sei</label>
+                                    <div ng-repeat="tema in temas" >
+                                        <div class="row">
+                                            <div class="col-lg-5">
+
+                                                <label>
+                                                    {{tema.Pergunta}}
+                                                </label>
+                                            </div>
+                                            <div class="col-lg-7">
+
+                                                <div class="btn-group" role="group" id="tema-{{$index}}" style="padding-bottom:10px;">
+
+                                                    <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Sim'" ng-click="click(tema,'s')">
+                                                        Sim</label>
+                                                    <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Não'" ng-click="click(tema,'n')">
+                                                        Não</label>
+                                                    <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Não sei'" ng-click="click(tema,'ns')">
+                                                        Não sei</label>
+                                                </div>
+                                            </div>
+                                            <!--<hr style="width: 100%; color: black; height: 1px; background-color:black;" />-->
+
+                                        </div>
                                     </div>
-                                </div>
-                                <hr style="width: 100%; color: black; height: 1px; background-color:black;" />
+                                </div><!-- /input-group -->
 
                             </div>
-                        </div>
-                    </div><!-- /input-group -->
 
+                        </div>
+                    </div>
                 </div>
 
-                <div class="col-lg-7">
+                <div class="col-lg-8">
                     <div class="intro-text">
                         <span class="name">Deputados</span>
-                        {{estadoSelecionado}}
                     </div>
 
-                    <select  ng-model="estadoSelecionado" ng-options="estado.uf for estado in estados"
-                             ng-change="filter()" >
-                        <option value="">TODOS</option>
-                    </select>
+                    <div class="row">
+                        <label class="col-sm-2 control-label">Estado:</label>
+                        <div class="col-sm-3">
+                            <select  ng-model="estadoSelecionado" class="form-control" ng-options="estado.uf for estado in estados"
+                                     ng-change="filter()" >
+                                <option value="">TODOS</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <pagination total-items="deputados.length" ng-model="currentPage"
+                                max-size="maxSize" class="pagination-sm" boundary-links="true"
+                                rotate="false"></pagination>
+
+
                     <div class="list-group">
-                        <span>{{title}}</span>
-                        <d3-bars data="deputadosDaParada" label="nome" on-click="d3OnClick(item)"></d3-bars>
-                        <!--<br>-->
-                        <!--<br>-->
-                        <!--<span>First Item</span>-->
-                        <!--<input type="text" ng-model="d3Data[0].score"></input>-->
-                        <!--<br>-->
-                        <!--<span>Second Item</span>-->
-                        <!--<input type="text" ng-model="d3Data[1].score"></input>-->
-                        <!--<br>-->
-                        <!--<span>Third Item</span>-->
-                        <!--<input type="text" ng-model="d3Data[2].score"></input>-->
+                        <!--<d3-bars data="deputadosDaParada" label="nome" on-click="d3OnClick(item)"></d3-bars>-->
+                        <div class="list-group-item-text" ng-repeat="deputado in deputadosDaParada | orderBy:['-score','partido','nome'] | filter:estadoSelecionado">
 
-                        <!--<p class="list-group-item-text" ng-repeat="deputado in deputados | orderBy:['-score','partido','nome'] | filter:estadoSelecionado">-->
-                            <!--{{deputado.nome}} - {{deputado.partido}}/{{deputado.uf}}    -   {{deputado.score}}%-->
-                        <!--</p>-->
+                        <div class="col-lg-4">
+
+                            <span class="badge">{{deputado.partido}}/{{deputado.uf}}</span>
+                            {{deputado.nome}}
+
+                        </div>
+                        <div class="col-lg-8">
+                            <progressbar value="deputado.score"><span style="color:black; white-space:nowrap;">{{deputado.score | number : 2 }}%</span></progressbar>
+                        </div>
+                        </div>
+                        </div>
+
+
                     </div>
 
-                </div>
+                <!--<div class="col-lg-7">-->
+                    <!--<div class="intro-text">-->
+                        <!--<span class="name">Deputados</span>-->
+                        <!--{{estadoSelecionado}}-->
+                    <!--</div>-->
+
+                    <!--<select  ng-model="estadoSelecionado" ng-options="estado.uf for estado in estados"-->
+                             <!--ng-change="filter()" >-->
+                        <!--<option value="">TODOS</option>-->
+                    <!--</select>-->
+                    <!--<div class="list-group">-->
+                        <!--<span>{{title}}</span>-->
+                        <!--<d3-bars data="deputadosDaParada" label="nome" on-click="d3OnClick(item)"></d3-bars>-->
+                        <!--&lt;!&ndash;<br>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<br>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span>First Item</span>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<input type="text" ng-model="d3Data[0].score"></input>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<br>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span>Second Item</span>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<input type="text" ng-model="d3Data[1].score"></input>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<br>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span>Third Item</span>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<input type="text" ng-model="d3Data[2].score"></input>&ndash;&gt;-->
+
+                        <!--&lt;!&ndash;<p class="list-group-item-text" ng-repeat="deputado in deputados | orderBy:['-score','partido','nome'] | filter:estadoSelecionado">&ndash;&gt;-->
+                            <!--&lt;!&ndash;{{deputado.nome}} - {{deputado.partido}}/{{deputado.uf}}    -   {{deputado.score}}%&ndash;&gt;-->
+                        <!--&lt;!&ndash;</p>&ndash;&gt;-->
+                    <!--</div>-->
+
+                <!--</div>-->
 
 
 
