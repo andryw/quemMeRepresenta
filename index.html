@@ -175,10 +175,11 @@
                                 <!--max-size="maxSize" class="pagination-sm" boundary-links="true"-->
                                 <!--rotate="false"></pagination>-->
                     <br>
-
+                    <!--| startFrom:(currentPage-1):this| limitTo:pageSize-->
                     <div class="list-group">
                         <!--<d3-bars data="deputadosDaParada" label="nome" on-click="d3OnClick(item)"></d3-bars>-->
-                        <div class="row" ng-repeat="deputado in deputados | orderBy:['-score','partido','nome'] | filter:estadoSelecionado">
+                        <div class="row" ng-repeat="deputado in deputados | orderBy:['-score','partido','nome']
+                        | filter:estadoSelecionado  | startFrom:(currentPage-1):this| limitTo:pageSize">
 
                             <div class="col-lg-4 text-left">
 
@@ -189,7 +190,7 @@
 
                             <div class="col-lg-8 text-left" ng-if="deputado.score >= 0">
                                 <progressbar value="deputado.score" type="{{typeProgessBar(deputado.score)}}"
-                                             tooltip-html="{{iguais(deputado) + '<br /><br />' + diferentes(deputado)}}" popover-trigger="mouseenter">
+                                             tooltip-html-unsafe="{{iguais(deputado) + '<br /><br />' + diferentes(deputado)}}" popover-trigger="mouseenter">
                                     <span style="color:black; white-space:nowrap;">
                                     {{deputado.score | number : 2 }}%</span></progressbar>
                             </div>
@@ -203,20 +204,15 @@
 
                         </div>
 
+
+                            <pagination total-items="totalItems" items-per-page="15" ng-model="currentPage"
+                             class="pagination-sm" boundary-links="true" max-size="5"
+                            rotate="false"></pagination>
+
+
                         </div>
 
                     </div>
-
-                <!--<div class="col-lg-7">-->
-                    <!--<div class="intro-text">-->
-                        <!--<span class="name">Deputados</span>-->
-                        <!--{{estadoSelecionado}}-->
-                    <!--</div>-->
-
-                    <!--<select  ng-model="estadoSelecionado" ng-options="estado.uf for estado in estados"-->
-                             <!--ng-change="filter()" >-->
-                        <!--<option value="">TODOS</option>-->
-                    <!--</select>-->
             </div>
         </div>
     </section>
