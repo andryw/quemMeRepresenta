@@ -1,18 +1,13 @@
 [
   {
-    "Tema":"Coincidência reeleição",
-    "Pergunta":"coincidência da eleição?",
-    "descr":"As eleições municipais, estaduais e federais seriam no mesmo ano."
+    "Tema":"Maioridade 1",
+    "Pergunta":"redução da maioridade penal (1ª votação)?",
+    "descr":"Crimes hediondos (como estupro), homicídio doloso, lesão corporal grave ou lesão corporal seguida de morte, tráfico de drogas e roubo qualificado"
   },
   {
-    "Tema":"Cota para mulheres legislativo",
-    "Pergunta":"cota para mulheres no legislativo?",
-    "descr":"O texto previa uma espécie de reserva de vagas para as mulheres nas próximas três legislaturas. Na primeira delas, de 10% do total de cadeiras na Câmara dos Deputados, nas assembleias legislativas estaduais, nas câmaras de vereadores e na Câmara Legislativa do Distrito Federal. Na segunda legislatura, o percentual subiria para 12% e, na terceira, para 15%."
-  },
-  {
-    "Tema":"Distritao",
-    "Pergunta":"sistema de voto Distritão?",
-    "descr":"Neste sistema, Estados e o Distrito Federal são transformados em distritos eleitorais e os candidatos eleitos são aqueles que conseguem o maior número de votos em cada distrito."
+    "Tema":"Maioridade 2",
+    "Pergunta":"redução da maioridade penal (2ª votação - excluindo tráfico de drogas e roubo qualificado)?",
+    "descr":"Crimes hediondos (como estupro), homicídio doloso e lesão corporal grave ou lesão corporal seguida de morte."
   },
   {
     "Tema":"Financiamento privado para partidos",
@@ -25,25 +20,36 @@
     "descr":"Financiamento privado de campanhas para partidos políticos e candidatos."
   },
   {
-    "Tema":"Maioridade 1",
-    "Pergunta":"redução da maioridade penal (1ª votação)?",
-    "descr":"Crimes hediondos (como estupro), homicídio doloso, lesão corporal grave ou lesão corporal seguida de morte, tráfico de drogas e roubo qualificado"
+    "Tema":"Terceirização",
+    "Pergunta":"emenda da terceirização?",
+    "descr":"Entre outros pontos: terceirizar a atividade-fim; redução de 24 meses para 12 meses a chamada quarentena, período que o ex-empregado de uma empresa deve cumprir a fim de poder prestar serviços à mesma empresa por uma contratada de terceirização"
   },
   {
-    "Tema":"Maioridade 2",
-    "Pergunta":"redução da maioridade penal (2ª votação - excluindo tráfico de drogas e roubo qualificado)?",
-    "descr":"Crimes hediondos (como estupro), homicídio doloso e lesão corporal grave ou lesão corporal seguida de morte."
+    "Tema":"Distritao",
+    "Pergunta":"sistema de voto Distritão?",
+    "descr":"Neste sistema, Estados e o Distrito Federal são transformados em distritos eleitorais e os candidatos eleitos são aqueles que conseguem o maior número de votos em cada distrito."
   },
   {
-    "Tema":"Pensão",
-    "Pergunta":"restrição de acesso a pensão por morte?",
-    "descr":"Pelo texto aprovado, os cônjuges só poderão requerer pensão por morte do companheiro se o tempo de união estável ou casamento for de mais de dois anos e o segurado tiver contribuído para o INSS por, no mínimo, um ano e meio."
+    "Tema":"Transgênico",
+    "Pergunta":"retirada de avisos de produtos transgênicos?",
+    "descr":"Não é obrigatório os avisos de produtos transgênicos nas embalagens."
   },
   {
     "Tema":"Reeleição",
     "Pergunta":"fim da reeleição para cargos executivos?",
     "descr":"Fim da reeleição para presidente da República, governador e prefeito"
   },
+  {
+    "Tema":"Cota para mulheres legislativo",
+    "Pergunta":"cota para mulheres no legislativo?",
+    "descr":"O texto previa uma espécie de reserva de vagas para as mulheres nas próximas três legislaturas. Na primeira delas, de 10% do total de cadeiras na Câmara dos Deputados, nas assembleias legislativas estaduais, nas câmaras de vereadores e na Câmara Legislativa do Distrito Federal. Na segunda legislatura, o percentual subiria para 12% e, na terceira, para 15%."
+  },
+  {
+    "Tema":"Pensão",
+    "Pergunta":"restrição de acesso a pensão por morte?",
+    "descr":"Pelo texto aprovado, os cônjuges só poderão requerer pensão por morte do companheiro se o tempo de união estável ou casamento for de mais de dois anos e o segurado tiver contribuído para o INSS por, no mínimo, um ano e meio."
+  },
+
   {
     "Tema":"Seguro Desemprego",
     "Pergunta":"endurecimento do acesso ao seguro-desemprego?",
@@ -55,16 +61,6 @@
     "descr":"Mudança no tempo de mandato dos cargos do executivo para 5 anos"
   },
   {
-    "Tema":"Terceirização",
-    "Pergunta":"emenda da terceirização?",
-    "descr":"Entre outros pontos: terceirizar a atividade-fim; redução de 24 meses para 12 meses a chamada quarentena, período que o ex-empregado de uma empresa deve cumprir a fim de poder prestar serviços à mesma empresa por uma contratada de terceirização"
-  },
-  {
-    "Tema":"Transgênico",
-    "Pergunta":"retirada de avisos de produtos transgênicos?",
-    "descr":"Não é obrigatório os avisos de produtos transgênicos nas embalagens."
-  },
-  {
     "Tema":"Voto Facultativo",
     "Pergunta":"voto facultativo?",
     "descr":"Não obrigatoriedade do voto."
@@ -73,5 +69,10 @@
     "Tema":"Voto impresso",
     "Pergunta":"voto impresso?",
     "descr":"Impressão do voto."
+  },
+  {
+    "Tema":"Coincidência reeleição",
+    "Pergunta":"coincidência da eleição?",
+    "descr":"As eleições municipais, estaduais e federais seriam no mesmo ano."
   }
 ]
