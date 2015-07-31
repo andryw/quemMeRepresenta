@@ -1,8 +1,8 @@
 [
   {
     "Tema":"Coincidência reeleição",
-    "Pergunta":"coincidência da reeleição?",
-    "descr":"coincidência da reeleição?"
+    "Pergunta":"coincidência da eleição?",
+    "descr":"As eleições municipais, estaduais e federais seriam no mesmo ano."
   },
   {
     "Tema":"Cota para mulheres legislativo",
@@ -17,26 +17,26 @@
   {
     "Tema":"Financiamento privado para partidos",
     "Pergunta":"financiamento privado de campanhas para partidos políticos?",
-    "descr":"financiamento privado de campanhas para partidos políticos?"
+    "descr":"Financiamento privado de campanhas para partidos políticos. Não é permitido o financiamento para candidatos."
   },
   {
     "Tema":"Financiamento privado para partidos e candidatos",
     "Pergunta":"financiamento privado de campanhas para partidos políticos e candidatos?",
-    "descr":"financiamento privado de campanhas para partidos políticos e candidatos?"
+    "descr":"Financiamento privado de campanhas para partidos políticos e candidatos."
   },
   {
     "Tema":"Maioridade 1",
-    "Pergunta":"redução da maioridade penal (primeira votação - crimes graves)?",
+    "Pergunta":"redução da maioridade penal (1ª votação)?",
     "descr":"Crimes hediondos (como estupro), homicídio doloso, lesão corporal grave ou lesão corporal seguida de morte, tráfico de drogas e roubo qualificado"
   },
   {
     "Tema":"Maioridade 2",
-    "Pergunta":"redução da maioridade penal (segunda votação - excluindo tráfico de drogas e roubo qualificado)?",
-    "descr":"Crimes hediondos, homicídio doloso e lesão corporal seguida de morte?"
+    "Pergunta":"redução da maioridade penal (2ª votação - excluindo tráfico de drogas e roubo qualificado)?",
+    "descr":"Crimes hediondos (como estupro), homicídio doloso e lesão corporal grave ou lesão corporal seguida de morte."
   },
   {
     "Tema":"Pensão",
-    "Pergunta":"restrição do acesso à pensão por morte?",
+    "Pergunta":"restrição de acesso a pensão por morte?",
     "descr":"Pelo texto aprovado, os cônjuges só poderão requerer pensão por morte do companheiro se o tempo de união estável ou casamento for de mais de dois anos e o segurado tiver contribuído para o INSS por, no mínimo, um ano e meio."
   },
   {
@@ -46,32 +46,32 @@
   },
   {
     "Tema":"Seguro Desemprego",
-    "Pergunta":"endurecimento das regras de acesso ao seguro-desemprego (e outros)?",
-    "descr":"Endurecimento das regras de acesso ao seguro-desemprego, ao abono salarial e ao seguro-defeso?"
+    "Pergunta":"endurecimento do acesso ao seguro-desemprego?",
+    "descr":"Endurecimento das regras de acesso ao seguro-desemprego, ao abono salarial e ao seguro-defeso."
   },
   {
     "Tema":"Tempo Mandato",
-    "Pergunta":"tempo de mandato do executivo ser de 5 anos?",
-    "descr":"5 anos"
+    "Pergunta":"tempo de mandato de 5 anos?",
+    "descr":"Mudança no tempo de mandato dos cargos do executivo para 5 anos"
   },
   {
     "Tema":"Terceirização",
     "Pergunta":"emenda da terceirização?",
-    "descr":"Qualquer atividade pode ser terceirizada?"
+    "descr":"Entre outros pontos: terceirizar a atividade-fim; redução de 24 meses para 12 meses a chamada quarentena, período que o ex-empregado de uma empresa deve cumprir a fim de poder prestar serviços à mesma empresa por uma contratada de terceirização"
   },
   {
     "Tema":"Transgênico",
     "Pergunta":"retirada de avisos de produtos transgênicos?",
-    "descr":""
+    "descr":"Não é obrigatório os avisos de produtos transgênicos nas embalagens."
   },
   {
     "Tema":"Voto Facultativo",
     "Pergunta":"voto facultativo?",
-    "descr":""
+    "descr":"Não obrigatoriedade do voto."
   },
   {
     "Tema":"Voto impresso",
     "Pergunta":"voto impresso?",
-    "descr":""
+    "descr":"Impressão do voto."
   }
 ]
