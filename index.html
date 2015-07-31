@@ -22,9 +22,8 @@
     <!--<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">-->
 
     <!-- Custom Fonts -->
-    <!--<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
-    <!--<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">-->
-    <!--<link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">-->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/social_media.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,6 +32,18 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!--<script>-->
+        <!--(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){-->
+                    <!--(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),-->
+                <!--m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)-->
+        <!--})(window,document,'script','//www.google-analytics.com/analytics.js','ga');-->
+
+        <!--ga('create', 'UA-64197950-1', 'auto');-->
+        <!--ga('send', 'pageview');-->
+
+    <!--</script>-->
+
+    <!-- -->
 </head>
 
 <body ng-controller="VotacoesCtrl">
@@ -73,15 +84,38 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-10">
 
-                <h2>Quem me representa?</h2>
-                <h5>Saiba quais deputados se parecem com você de acordo com as votações da câmara.
-                Dê sua opinião nos temas listados e os deputados serão ordenados pela semelhança com a sua opinião dada.
-                </h5>
+                    <h2>Quem me representa?</h2>
+                    <h5>Saiba quais deputados se parecem com você de acordo com as votações da câmara.
+                    Dê sua opinião nos temas listados e os deputados serão ordenados pela semelhança com a sua opinião dada.
+                    </h5>
+                </div>
+
+                <div class="col-lg-2">
+
+                    <a   class="btn btn-social-icon btn-facebook"
+                         href="https://www.facebook.com/sharer/sharer.php?u=STE" target="_blank"
+                         onclick="javascript:window.open(this.href, '',
+						   'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                         title="Compartilhe no Facebook!">
+                        <i class="fa fa-facebook"></i></a>
+
+                    <a  class="btn btn-social-icon btn-twitter"
+                        href="http://twitter.com/home?status=ppquando.com.br"
+                        onclick="javascript:window.open(this.href, '',
+						   'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+
+                        title="Compartilhe no Twitter!">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+
+
                 </div>
             </div>
         </div>
+
+
 
     </header>
     <!--<section id="deputados_section" style="background-color: #0a4b3e">-->
