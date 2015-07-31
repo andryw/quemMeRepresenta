@@ -196,15 +196,29 @@
                     </div>
 
                     <div class="row">
-                        <label>Nome: <input ng-model="search.nome"></label>
 
-                        <h4 class="col-sm-2 control-label">Estado:</h4>
-                        <div class="col-sm-3">
-                            <select  ng-model="estadoSelecionado" class="form-control" ng-options="estado.uf for estado in estados"
-                                     ng-change="filter()" >
-                                <option value="">TODOS</option>
-                            </select>
-                            Deputados : {{deput_filtrados.length}}
+                        <div class="container">
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <label>Estado:</label>
+                                    <select  ng-model="estadoSelecionado" class="form-control" ng-options="estado.uf for estado in estados"
+                                             ng-change="filter()" >
+                                        <option value="">TODOS</option>
+                                    </select>
+
+                                    <!--<input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">-->
+                                </div>
+                                <div class="form-group">
+                                    <label>Nome:</label>
+                                    <input ng-model="search.nome" class="form-control">
+                                </div>
+                                <!--<button type="submit" class="btn btn-default">Send invitation</button>-->
+                            </form>
+
+
+                            <!--<label>Nome:</label>-->
+                            <br>
+                            <label>Deputados : {{deput_filtrados.length}}</label>
                         </div>
                     </div>
 
@@ -241,8 +255,8 @@
 
 
                             <pagination total-items="totalItems" items-per-page="pageSize" ng-model="currentPage"
-                             class="pagination-sm" boundary-links="true" max-size="5"
-                            rotate="false"></pagination>
+                             class="pagination-sm" boundary-links="true" max-size="5" first-text="Início" last-text="Fim"
+                                        previous-text="Ant." next-text="Próx." rotate="false"></pagination>
 
 
                     </div>
