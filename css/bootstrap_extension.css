@@ -16,3 +16,9 @@
 #deputados_section{
     /*background: #5DB2E2;*/
 }
+
+.btn-default.active{
+    color:#ffffff;background-color:#000000;
+    border-color: #01101f;
+}
+/*.btn-default:hover{color:#ffffff;background-color:#232628;border-color:#1e2023}*/

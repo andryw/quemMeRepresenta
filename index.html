@@ -136,135 +136,124 @@
 
 
     <section id="deputados_section">
-        <div class="row">
             <div class="container">
-                <div class="col-lg-5">
-                    <div class="row">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <h2>Você é a favor de(a):
+                                    <button class="btn btn-default inline visible-xs inline" ng-click="collapsed = !collapsed"
+                                            ng-class="collapsed ? 'visible-sm visible-md visible-lg' : ''">
+                                        <span ng-class="collapsed ? 'glyphicon glyphicon-plus' : 'glyphicon glyphicon-minus'"></span></button>
+                                </h2>
+                                <!--<input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">-->
+                            </div>
+                        </form>
+
+                        <div collapse="collapsed">
+                            <div ng-repeat="tema in temas" >
                                 <div class="row">
-                                    <div class="container">
-                                        <h2 class="btn-group">Você é a favor de(a)
-                                            <button class="btn btn-default inline visible-xs visible-sm inline" ng-click="collapsed = !collapsed"
-                                                    ng-class="collapsed ? 'visible-md visible-lg' : ''">
-                                                <span ng-class="collapsed ? 'glyphicon glyphicon-plus' : 'glyphicon glyphicon-minus'"></span></button>
-                                        </h2>
+                                    <div class="col-lg-6">
+
+                                        <label>
+                                            {{tema.Pergunta}}
+                                            <a href=""
+                                                    ng-click="tema_descricao(tema)">
+                                                <span class="glyphicon glyphicon-info-sign"></span>
+                                            </a>
+
+                                        </label>
+
                                     </div>
+                                    <div class="col-lg-6">
 
-                                </div>
+                                        <div class="btn-group" role="group" id="tema-{{$index}}" style="padding-bottom:10px;">
 
-
-                                <div collapse="collapsed">
-
-                                    <div ng-repeat="tema in temas" >
-                                        <div class="row">
-                                            <div class="col-lg-6">
-
-                                                <label>
-                                                    {{tema.Pergunta}}
-                                                    <a href=""
-                                                            ng-click="tema_descricao(tema)">
-                                                        <span class="glyphicon glyphicon-info-sign"></span>
-                                                    </a>
-
-                                                </label>
-
-                                            </div>
-                                            <div class="col-lg-6">
-
-                                                <div class="btn-group" role="group" id="tema-{{$index}}" style="padding-bottom:10px;">
-
-                                                    <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Sim'" ng-click="click(tema,'s')">
-                                                        Sim</label>
-                                                    <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Não'" ng-click="click(tema,'n')">
-                                                        Não</label>
-                                                    <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Não sei'" ng-click="click(tema,'ns')">
-                                                        Não sei</label>
-                                                </div>
-                                            </div>
-
+                                            <label class="btn btn-default" ng-model="radioModel" btn-radio="'Sim'" ng-click="click(tema,'s')">
+                                                Sim</label>
+                                            <label class="btn btn-default" ng-model="radioModel" btn-radio="'Não'" ng-click="click(tema,'n')">
+                                                Não</label>
+                                            <label class="btn btn-default" ng-model="radioModel" btn-radio="'Não sei'" ng-click="click(tema,'ns')">
+                                                Não sei</label>
                                         </div>
                                     </div>
-                                </div><!-- /input-group -->
 
-
-                    </div>
-                </div>
-
-
-                <div class="col-lg-7">
-                    <div>
-                        <h2>Deputados</h2>
-                    </div>
-
-                    <div class="row">
-
-                        <div class="container">
-                            <form class="form-inline">
-                                <div class="form-group">
-                                    <label>Estado:</label>
-                                    <select  ng-model="estadoSelecionado" class="form-control" ng-options="estado.uf for estado in estados"
-                                             ng-change="filter()" >
-                                        <option value="">TODOS</option>
-                                    </select>
-
-                                    <!--<input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">-->
                                 </div>
-                                <div class="form-group">
-                                    <label>Nome:</label>
+                            </div>
+                       </div><!-- /input-group -->
+                    </div> <!-- col -->
+
+
+                    <div class="col-sm-7">
+                        <!--<div class="container">-->
+
+                        <div>
+                            <h2>Deputados</h2>
+                        </div>
+
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <h3>Estado:
+                                <select  ng-model="estadoSelecionado" class="form-control" ng-options="estado.uf for estado in estados"
+                                         ng-change="filter()" >
+                                    <option value="">TODOS</option>
+                                </select>
+                                </h3>
+                                <!--<input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">-->
+                            </div>
+                            <div class="form-group">
+                                <h3>Nome:
                                     <input ng-model="search.nome" class="form-control">
+                                </h3>
+                            </div>
+                            <div class="form-group">
+                                <h3>Deputados : {{deput_filtrados.length}}</h3>
+                            </div>
+                            <!--<button type="submit" class="btn btn-default">Send invitation</button>-->
+                        </form>
+                        
+                        <br>
+                        <div class="list-group">
+
+                            <div class="row" ng-repeat="deputado in (deput_filtrados =
+                            (deputados | orderBy:['-score','nome']
+                            | filter:estadoSelecionado  | filter:search)
+                            | startFrom:(currentPage-1):this| limitTo:pageSize)">
+
+                                <div class="col-lg-4 text-left">
+
+                                    <span class="badge">{{deputado.partido}}/{{deputado.uf}}</span>
+                                    {{deputado.nome}}
+
                                 </div>
-                                <!--<button type="submit" class="btn btn-default">Send invitation</button>-->
-                            </form>
+
+                                <div class="col-lg-8 text-left" ng-if="deputado.score >= 0">
+                                    <progressbar value="deputado.score" type="{{typeProgessBar(deputado.score)}}"
+                                                 tooltip-html-unsafe="{{iguais(deputado) + '<br /><br />' + diferentes(deputado)}}" popover-trigger="mouseenter">
+                                        <span style="color:black; white-space:nowrap;">
+                                        {{deputado.score | number : 2 }}%</span></progressbar>
+                                </div>
+                                <div class="col-lg-8 text-left" ng-if="deputado.score < 0" style="padding-bottom:10px">
+                                    <span class="badge progress-bar-danger" tooltip="{{tooltip_semvalor}}"
+                                          ng-if="deputado.nome != 'Eduardo Cunha'">Sem Valor</span>
+                                    <span class="badge progress-bar-danger" tooltip="{{tooltip_art17}}"
+                                          ng-if="deputado.nome == 'Eduardo Cunha'">Art. 17</span>
+
+                                </div>
+
+                            </div>
 
 
-                            <!--<label>Nome:</label>-->
-                            <br>
-                            <label>Deputados : {{deput_filtrados.length}}</label>
+                                <pagination total-items="totalItems" items-per-page="pageSize" ng-model="currentPage"
+                                 class="pagination-sm" boundary-links="true" max-size="5" first-text="Início" last-text="Fim"
+                                            previous-text="Ant." next-text="Próx." rotate="false"></pagination>
+
+
                         </div>
                     </div>
+                </div><!--row -->
+            </div>  <!--container -->
 
-                    <br>
-                    <div class="list-group">
-
-                        <div class="row" ng-repeat="deputado in (deput_filtrados =
-                        (deputados | orderBy:['-score','nome']
-                        | filter:estadoSelecionado  | filter:search)
-                        | startFrom:(currentPage-1):this| limitTo:pageSize)">
-
-                            <div class="col-lg-4 text-left">
-
-                                <span class="badge">{{deputado.partido}}/{{deputado.uf}}</span>
-                                {{deputado.nome}}
-
-                            </div>
-
-                            <div class="col-lg-8 text-left" ng-if="deputado.score >= 0">
-                                <progressbar value="deputado.score" type="{{typeProgessBar(deputado.score)}}"
-                                             tooltip-html-unsafe="{{iguais(deputado) + '<br /><br />' + diferentes(deputado)}}" popover-trigger="mouseenter">
-                                    <span style="color:black; white-space:nowrap;">
-                                    {{deputado.score | number : 2 }}%</span></progressbar>
-                            </div>
-                            <div class="col-lg-8 text-left" ng-if="deputado.score < 0" style="padding-bottom:10px">
-                                <span class="badge progress-bar-danger" tooltip="{{tooltip_semvalor}}"
-                                      ng-if="deputado.nome != 'Eduardo Cunha'">Sem Valor</span>
-                                <span class="badge progress-bar-danger" tooltip="{{tooltip_art17}}"
-                                      ng-if="deputado.nome == 'Eduardo Cunha'">Art. 17</span>
-
-                            </div>
-
-                        </div>
-
-
-                            <pagination total-items="totalItems" items-per-page="pageSize" ng-model="currentPage"
-                             class="pagination-sm" boundary-links="true" max-size="5" first-text="Início" last-text="Fim"
-                                        previous-text="Ant." next-text="Próx." rotate="false"></pagination>
-
-
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
     </section>
 
 
@@ -273,9 +262,8 @@
     <section id="section_calculo">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-12">
                     <h2>Como o cálculo é feito?</h2>
-                    <!--<hr>-->
                     <ol>
                         <li>
                             Você dá sua opinião sobre temas.
@@ -314,7 +302,7 @@
     <section id="about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-12">
                     <h2>About</h2>
                     <!--<hr>-->
                     <h5> Projeto idealizado no 3º Hackfest Analytics, promovido pelo
