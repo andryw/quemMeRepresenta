@@ -22,5 +22,9 @@
     border-color: #01101f;
 }
 
+.top-buffer {
+    margin-top:80px;
+    margin-bottom:90px;
+}
 
 /*.btn-default:hover{color:#ffffff;background-color:#232628;border-color:#1e2023}*/

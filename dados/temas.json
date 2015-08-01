@@ -2,16 +2,16 @@
   {
     "Tema":"Maioridade 1",
     "Pergunta":"redução da maioridade penal (1ª votação)?",
-    "descr":"Crimes hediondos (como estupro), homicídio doloso, lesão corporal grave ou lesão corporal seguida de morte, tráfico de drogas e roubo qualificado"
+    "descr":"A redução da maioridade penal para 16 anos se enquadra nos seguintes casos: crimes hediondos (como estupro), homicídio doloso, lesão corporal grave ou lesão corporal seguida de morte, tráfico de drogas e roubo qualificado"
   },
   {
     "Tema":"Maioridade 2",
     "Pergunta":"redução da maioridade penal (2ª votação - excluindo tráfico de drogas e roubo qualificado)?",
-    "descr":"Crimes hediondos (como estupro), homicídio doloso e lesão corporal grave ou lesão corporal seguida de morte."
+    "descr":"A redução da maioridade penal para 16 anos se enquadra nos seguintes casos: crimes hediondos (como estupro), homicídio doloso e lesão corporal grave ou lesão corporal seguida de morte."
   },
   {
     "Tema":"Financiamento privado para partidos",
-    "Pergunta":"financiamento privado de campanhas para partidos políticos?",
+    "Pergunta":"financiamento privado de campanhas só para partidos políticos?",
     "descr":"Financiamento privado de campanhas para partidos políticos. Não é permitido o financiamento para candidatos."
   },
   {
@@ -27,16 +27,16 @@
   {
     "Tema":"Distritao",
     "Pergunta":"sistema de voto Distritão?",
-    "descr":"Neste sistema, Estados e o Distrito Federal são transformados em distritos eleitorais e os candidatos eleitos são aqueles que conseguem o maior número de votos em cada distrito."
+    "descr":"Neste sistema, Estados e o Distrito Federal são transformados em distritos eleitorais e os candidatos eleitos são aqueles que conseguem o maior número de votos em cada distrito. Atualmente o sistema em vigor é o Sistema Proporcional."
   },
   {
     "Tema":"Transgênico",
-    "Pergunta":"retirada de avisos de produtos transgênicos?",
+    "Pergunta":"retirada das embalagens o aviso de produto transgênico?",
     "descr":"Não é obrigatório os avisos de produtos transgênicos nas embalagens."
   },
   {
     "Tema":"Reeleição",
-    "Pergunta":"fim da reeleição para cargos executivos?",
+    "Pergunta":"fim da reeleição?",
     "descr":"Fim da reeleição para presidente da República, governador e prefeito"
   },
   {
