@@ -18,6 +18,7 @@
 
     <link href="css/bootstrap_extension.css" rel="stylesheet">
 
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.js"></script>
     <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.0.js"></script>
     <script src="lib/controllers.js"></script>
@@ -51,30 +52,31 @@
 <body ng-controller="VotacoesCtrl">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-default" role="navigation">
         <div class="container">
 
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#aaaaaa"
+                        ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top">Quem me representa?</a>
+                <a class="navbar-brand" href="#">Quem me representa?</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="navbar-collapse collapse" id="navbar">
+            <div class="collapse navbar-collapse" id="aaaaaa"  ng-class="!navCollapsed && 'in'" ng-click="navCollapsed = true">
 
                 <ul class="nav navbar-nav">
-                    <li class="page-scroll">
+                    <li>
                         <a href="#deputados_section">Deputados</a>
                     </li>
-                    <li class="page-scroll">
+                    <li>
                         <a href="#section_calculo">Cálculo</a>
                     </li>
-                    <li class="page-scroll">
+                    <li>
                         <a href="#about">Sobre</a>
                     </li>
                 </ul>
@@ -338,7 +340,6 @@
     </footer>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
 
     <script src="lib/controllers.js"></script>
