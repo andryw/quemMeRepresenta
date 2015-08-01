@@ -35,16 +35,16 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!--<script>-->
-        <!--(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){-->
-                    <!--(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),-->
-                <!--m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)-->
-        <!--})(window,document,'script','//www.google-analytics.com/analytics.js','ga');-->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        <!--ga('create', 'UA-64197950-1', 'auto');-->
-        <!--ga('send', 'pageview');-->
+        ga('create', 'UA-65858438-1', 'auto');
+        ga('send', 'pageview');
 
-    <!--</script>-->
+    </script>
 
     <!-- -->
 </head>
@@ -70,6 +70,9 @@
             <div class="collapse navbar-collapse" id="aaaaaa"  ng-class="!navCollapsed && 'in'" ng-click="navCollapsed = true">
 
                 <ul class="nav navbar-nav">
+                    <li class="visible-xs">
+                        <a href="#votacao_section">Temas</a>
+                    </li>
                     <li>
                         <a href="#deputados_section">Deputados</a>
                     </li>
@@ -101,14 +104,14 @@
                 <div class="col-lg-2">
 
                     <a   class="btn btn-social-icon btn-facebook"
-                         href="https://www.facebook.com/sharer/sharer.php?u=STE" target="_blank"
+                         href="https://www.facebook.com/sharer/sharer.php?u=qmrepresenta.com.br" target="_blank"
                          onclick="javascript:window.open(this.href, '',
 						   'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
                          title="Compartilhe no Facebook!">
                         <i class="fa fa-facebook"></i></a>
 
                     <a  class="btn btn-social-icon btn-twitter"
-                        href="http://twitter.com/home?status=ppquando.com.br"
+                        href="http://twitter.com/home?status=qmrepresenta.com.br"
                         onclick="javascript:window.open(this.href, '',
 						   'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
 
@@ -137,10 +140,10 @@
     </script>
 
 
-    <section id="deputados_section">
+    <section>
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-5">
+                    <div class="col-sm-5" id="votacao_section">
                         <form class="form-inline">
                             <div class="form-group">
                                 <h2>Você é a favor de(a):
@@ -187,7 +190,7 @@
                     </div> <!-- col -->
 
 
-                    <div class="col-sm-7">
+                    <div class="col-sm-7"  id="deputados_section">
                         <!--<div class="container">-->
 
                         <div>
@@ -311,6 +314,8 @@
                     <h5> Projeto idealizado no 3º Hackfest Analytics, promovido pelo
                         <a href="https://www.facebook.com/analytics.ufcg">Laboratório Analytics</a> da UFCG.
                         Desenvolvido por: Andryw Marques, Nazareno de Andrade e João Arthur.
+
+                        Dúvidas, críticas e sugestões: qmrepresenta@gmail.com
                     </h5>
 
 
