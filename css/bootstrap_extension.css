@@ -27,4 +27,11 @@
     margin-bottom:90px;
 }
 
+.tooltip-inner {
+    max-width: 900px;
+    min-width: 240px;
+    text-align: left;
+
+}
+
 /*.btn-default:hover{color:#ffffff;background-color:#232628;border-color:#1e2023}*/
