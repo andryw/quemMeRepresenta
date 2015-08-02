@@ -111,6 +111,7 @@
                     <h2>Quem me representa?</h2>
                     <h5>Saiba quais deputados se parecem com você de acordo com as votações da câmara.
                     Dê sua opinião nos temas listados e os deputados serão ordenados pela semelhança com a sua opinião dada.
+                    Você pode também selecionar seu estado ou filtrar pelo nome.
                     </h5>
                 </div>
 
@@ -253,7 +254,7 @@
                                     <div class="col-xs-11 text-left" ng-if="deputado.score >= 0">
 
                                     <progressbar value="deputado.score" type="{{typeProgessBar(deputado.score)}}"
-                                                 tooltip-html-unsafe="{{iguais(deputado) + '<br /><br />' + diferentes(deputado)}}"
+                                                 tooltip-html-unsafe="{{getTooltipProgressBar(deputado)}}"
                                                  popover-trigger="mouseenter">
                                         <span style="color:white; white-space:nowrap;">
                                              <strong>
