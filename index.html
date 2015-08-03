@@ -175,8 +175,8 @@
 
                         <div collapse="collapsed">
                             <div ng-repeat="tema in temas" >
-                                <div class="row">
-                                    <div class="col-lg-6">
+                                <div class="row" style="padding-bottom:15px;">
+                                    <div class="col-xs-12 col-md-5 col-lg-6">
 
                                         <label>
                                             {{tema.Pergunta}}
@@ -188,9 +188,9 @@
                                         </label>
 
                                     </div>
-                                    <div class="col-lg-6">
+                                    <div class="col-xs-12 col-md-7 col-lg-6">
 
-                                        <div class="btn-group" role="group" id="tema-{{$index}}" style="padding-bottom:20px;">
+                                        <div class="btn-group" role="group" id="tema-{{$index}}" >
 
                                             <label class="btn btn-default" ng-model="radioModel" btn-radio="'Sim'" title="Sim" ng-click="click(tema,'s')">
                                                 Sim</label>

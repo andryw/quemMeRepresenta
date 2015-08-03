@@ -2,12 +2,12 @@
   {
     "Tema":"Maioridade 1",
     "Pergunta":"redução da maioridade penal (1ª votação)?",
-    "descr":"A redução da maioridade penal para 16 anos se enquadra nos seguintes casos: crimes hediondos (como estupro), homicídio doloso, lesão corporal grave ou lesão corporal seguida de morte, tráfico de drogas e roubo qualificado"
+    "descr":"A redução da maioridade penal para 16 anos se enquadria nos seguintes casos: crimes hediondos (como estupro), homicídio doloso, lesão corporal grave ou lesão corporal seguida de morte, tráfico de drogas e roubo qualificado"
   },
   {
     "Tema":"Maioridade 2",
     "Pergunta":"redução da maioridade penal (2ª votação - excluindo tráfico de drogas e roubo qualificado)?",
-    "descr":"A redução da maioridade penal para 16 anos se enquadra nos seguintes casos: crimes hediondos (como estupro), homicídio doloso e lesão corporal grave ou lesão corporal seguida de morte."
+    "descr":"A redução da maioridade penal para 16 anos se enquadria nos seguintes casos: crimes hediondos (como estupro), homicídio doloso e lesão corporal grave ou lesão corporal seguida de morte."
   },
   {
     "Tema":"Financiamento privado para partidos",
@@ -22,12 +22,12 @@
   {
     "Tema":"Terceirização",
     "Pergunta":"emenda da terceirização?",
-    "descr":"Entre outros pontos: terceirizar a atividade-fim; redução de 24 meses para 12 meses a chamada quarentena, período que o ex-empregado de uma empresa deve cumprir a fim de poder prestar serviços à mesma empresa por uma contratada de terceirização"
+    "descr":"Entre outros pontos: terceirizar a atividade-fim; redução de 24 meses para 12 meses a chamada quarentena, período que o ex-empregado de uma empresa deve cumprir a fim de poder prestar serviços à mesma empresa por uma contratada de terceirização. Para saber mais: http://goo.gl/RDRhGT"
   },
   {
     "Tema":"Distritao",
     "Pergunta":"sistema de voto Distritão?",
-    "descr":"Neste sistema, Estados e o Distrito Federal são transformados em distritos eleitorais e os candidatos eleitos são aqueles que conseguem o maior número de votos em cada distrito. Atualmente o sistema em vigor é o Sistema Proporcional."
+    "descr":"Neste sistema, Estados e o Distrito Federal são transformados em distritos eleitorais e os candidatos eleitos são aqueles que conseguem o maior número de votos em cada distrito (semelhante nas eleições para presidente, governador e prefeito, onde quem tem o maior número de votos é eleito). Atualmente o sistema em vigor é o Sistema Proporcional. Para saber mais sobre o sitema proporcional: http://goo.gl/BsdeHx . Para saber mais sobre a lei: http://goo.gl/02Hbnb"
   },
   {
     "Tema":"Transgênico",
@@ -47,18 +47,18 @@
   {
     "Tema":"Pensão",
     "Pergunta":"restrição de acesso a pensão por morte?",
-    "descr":"Pelo texto aprovado, os cônjuges só poderão requerer pensão por morte do companheiro se o tempo de união estável ou casamento for de mais de dois anos e o segurado tiver contribuído para o INSS por, no mínimo, um ano e meio."
+    "descr":"Pelo texto aprovado, os cônjuges só poderão requerer pensão por morte do companheiro se o tempo de união estável ou casamento for de mais de dois anos e o segurado tiver contribuído para o INSS por, no mínimo, um ano e meio. Antes, não era exigido tempo mínimo de contribuição para que os dependentes tivessem direito ao benefício, mas era necessário que, na data da morte, o segurado estivesse contribuindo para a Previdência Social. Para saber mais: http://goo.gl/XS62zP"
   },
 
   {
     "Tema":"Seguro Desemprego",
     "Pergunta":"endurecimento do acesso ao seguro-desemprego?",
-    "descr":"Endurecimento das regras de acesso ao seguro-desemprego, ao abono salarial e ao seguro-defeso."
+    "descr":"Com a lei fica mais difícil o acesso ao seguro-desemprego, ao abono salarial e ao seguro-defeso. Por exemplo: antes era necessário que um empregado tivesse um tempo de trabalho de no mínimo 6 meses para solicitar o seguro-desemprego no ato da demissão. Com a lei esse tempo mínimo passou para 1 ano. O objetivo da lei é reduzir os gastos. Para saber mais: http://goo.gl/H0dCtH"
   },
   {
     "Tema":"Tempo Mandato",
     "Pergunta":"tempo de mandato de 5 anos?",
-    "descr":"Mudança no tempo de mandato dos cargos do executivo para 5 anos"
+    "descr":"Mudança no tempo de mandato dos cargos do executivo (prefeito, governador e presidente) para 5 anos. Atualmente o mandato é de 4 anos."
   },
   {
     "Tema":"Voto Facultativo",
