@@ -154,6 +154,26 @@
 
     </script>
 
+    <script type="text/ng-template" id="modal_deputados.html">
+        <div class="modal-header">
+            <h3 class="modal-title">{{ "Votações do deputado: " +  deputado.nome }}</h3>
+        </div>
+        <div class="modal-body">
+            <div ng-repeat="voto in deputado.temas_nomes" >
+                <b>{{ voto.tema + ": "}}</b>
+                <span ng-class="{green: voto.value == 'sim', red: voto.value == 'não'}">
+                    <b> {{voto.value}}</b>
+                </span>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+        </div>
+
+    </script>
+
+
 
     <section class="top-buffer">
             <div class="container">
@@ -243,14 +263,22 @@
                             | filter:estadoSelecionado  | filter:search)
                             | startFrom:(currentPage-1):this| limitTo:pageSize)">
 
-                                <div class="col-lg-4 text-left">
+                                <div class="col-lg-5 text-left">
 
                                     <span class="badge">{{deputado.partido}}/{{deputado.uf}}</span>
-                                    {{deputado.nome}}
+                                    <label>
+                                        {{deputado.nome}}
+                                        <a href=""
+                                           ng-click="votos_deputados(deputado)">
+                                            <span class="glyphicon glyphicon-info-sign"></span>
+                                        </a>
+
+                                    </label>
+
 
                                 </div>
 
-                                <div class="col-lg-8 text-left" ng-if="deputado.score >= 0">
+                                <div class="col-lg-7 text-left" ng-if="deputado.score >= 0">
                                     <div class="col-xs-11 text-left" ng-if="deputado.score >= 0">
 
                                     <progressbar value="deputado.score" type="{{typeProgessBar(deputado.score)}}"
@@ -271,7 +299,7 @@
                                     </div>
 
                                 </div>
-                                <div class="col-lg-8 text-left" ng-if="deputado.score < 0" style="padding-bottom:10px">
+                                <div class="col-lg-7 text-left" ng-if="deputado.score < 0" style="padding-bottom:10px">
                                     <span class="badge progress-bar-danger" tooltip="{{tooltip_semvalor}}"
                                           ng-if="deputado.nome != 'Eduardo Cunha'">Sem Valor</span>
                                     <span class="badge progress-bar-danger" tooltip="{{tooltip_art17}}"
