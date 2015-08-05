@@ -83,19 +83,19 @@
 
                 <ul class="nav navbar-nav">
                     <li class="visible-xs">
-                        <a href="#votacao_section">Temas</a>
+                        <a href="#votacao">Temas</a>
                     </li>
                     <li>
-                        <a href="#deputados_section">Deputados</a>
+                        <a href="#deputados">Deputados</a>
                     </li>
                     <li>
-                        <a href="#section_calculo">Cálculo</a>
+                        <a href="#calculo">Cálculo</a>
                     </li>
                     <li>
-                        <a href="#section_hoc">House of Cunha</a>
+                        <a href="#hoc">House of Cunha</a>
                     </li>
                     <li>
-                        <a href="#about">Sobre</a>
+                        <a href="#sobre">Sobre</a>
                     </li>
                 </ul>
             </div>
@@ -180,7 +180,7 @@
     <section class="top-buffer">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-5" id="votacao_section">
+                    <div class="col-sm-5" id="votacao">
                         <h2 style="display: inline-block; padding-bottom: 25px">Você é a favor de(a):
                             <span class="btn-group">
 
@@ -229,7 +229,7 @@
                     </div> <!-- col -->
 
 
-                    <div class="col-sm-7"  id="deputados_section">
+                    <div class="col-sm-7"  id="deputados">
                         <!--<div class="container">-->
 
                         <div>
@@ -255,6 +255,21 @@
                                 <h3>Deputados : {{deput_filtrados.length}}</h3>
                             </div>
                             <!--<button type="submit" class="btn btn-default">Send invitation</button>-->
+                            <div>
+                                <div class="checkbox">
+
+                                <label class="form-group">
+                                    <input type="checkbox" ng-model="mostrarPoucos"   >
+                                    <span tooltip="Permite visualizar também os deputados com poucas
+                                votações (deputados com menos da metade das que você opiniou)."  tooltip-placement="{{getTooltipPlacementRight()}}">
+                                      Mostrar deputados com poucas votações.
+                                    </span>
+                                </label>
+                                </div>
+
+                            </div>
+
+
                         </form>
 
                         <br>
@@ -262,7 +277,7 @@
 
                             <div class="row" ng-repeat="deputado in (deput_filtrados =
                             (deputados | orderBy:['-score','-sum','nome']
-                            | filter:estadoSelecionado  | filter:search)
+                            | filter:estadoSelecionado  | filter:search | minimoVotacoes:this)
                             | startFrom:(currentPage-1):this| limitTo:pageSize)">
 
                                 <div class="col-lg-5 text-left">
@@ -326,7 +341,7 @@
 
     <hr>
     <!-- About Calculo -->
-    <section id="section_calculo" class="top-buffer">
+    <section id="calculo" class="top-buffer">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -367,7 +382,7 @@
 
     <!-- HoC -->
 
-    <section id="section_hoc" class="top-buffer">
+    <section id="hoc" class="top-buffer">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -401,7 +416,7 @@
     <hr>
 
     <!-- About Section -->
-    <section id="about" class="top-buffer top-bottom">
+    <section id="sobre" class="top-buffer top-bottom">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
