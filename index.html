@@ -249,10 +249,19 @@
                         <form class="form-inline">
                             <div class="form-group">
                                 <h3>Estado:
-                                <select  ng-model="estadoSelecionado" class="form-control" ng-options="estado.uf for estado in estados"
-                                         ng-change="filter()" >
+                                <select  ng-model="estadoSelecionado" class="form-control"
+                                         ng-options="estado.uf for estado in estados">                                         " >
                                     <option value="">TODOS</option>
                                 </select>
+                                </h3>
+                                <!--<input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">-->
+                            </div>
+                            <div class="form-group">
+                                <h3>Partido:
+                                    <select  ng-model="partidoSelecionado" class="form-control"
+                                             ng-options="partido.partido for partido in partidos">
+                                        <option value="">TODOS</option>
+                                    </select>
                                 </h3>
                                 <!--<input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">-->
                             </div>
@@ -285,9 +294,12 @@
                         <br>
                         <div class="list-group">
 
+                            <div ng-if="deput_filtrados.length == 0">
+                                <h2> Nenhum deputado selecionado. </h2>
+                            </div>
                             <div class="row" ng-repeat="deputado in (deput_filtrados =
                             (deputados | orderBy:['-score','-sum','nome']
-                            | filter:estadoSelecionado  | filter:search | minimoVotacoes:this)
+                            | filter:estadoSelecionado  | filter:filtroPartido | filter:search | minimoVotacoes:this)
                             | startFrom:(currentPage-1):this| limitTo:pageSize)">
 
                                 <div class="col-lg-5 text-left">
@@ -414,6 +426,7 @@
                     </a>
 
 
+
                 </div>
             </div>
             <div class="row">
@@ -436,8 +449,17 @@
                         <a href="https://www.facebook.com/analytics.ufcg">Laboratório Analytics</a> da Universidade
                         Federal de Campina Grande.
                         Desenvolvido por: Andryw Marques, Nazareno de Andrade, João Arthur e Igleson Freire.
+<br><br>
 
                         Dúvidas, críticas e sugestões: qmrepresenta@gmail.com
+                        <br><br>
+
+
+                        Para novidades e atualizações curta a página no
+                        <a href="https://www.facebook.com/pages/Quem-Me-Representa/670401599762966">Facebook</a>.
+
+
+
                     </h5>
 
 
