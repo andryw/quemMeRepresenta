@@ -168,7 +168,7 @@
                     <td>Deputado</td>
                     <td>Você</td>
                 </thead>
-                <tr ng-repeat="voto in deputado.temas_nomes">
+                <tr ng-repeat="voto in deputado.temas_nomes" ng-class="getRoWColour(voto,$index)">
                     <td class="col-xs-6">{{ voto.tema }}</td>
                     <td class="col-xs-3">{{ voto.value }}</td>
                     <td class="col-xs-3">{{ getValueEleitor($index) }}</td>
