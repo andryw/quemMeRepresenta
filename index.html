@@ -98,6 +98,9 @@
                     <li>
                         <a href="#sobre">Sobre</a>
                     </li>
+                    <li>
+                        <a href="http://www.facebook.com/quemmerepresenta" target="_blank">Facebook</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -174,12 +177,12 @@
             <table class="table table-striped table-bordered table-condensed">
                 <thead>
                     <td>Tema</td>
-                    <td>Deputado</td>
+                    <td>{{titulo}}</td>
                     <td>Você</td>
                 </thead>
-                <tr ng-repeat="voto in deputado.temas_nomes" ng-class="getRoWColour(voto,$index)">
+                <tr ng-repeat="voto in deputado.temas" ng-class="getRoWColour(voto,$index)">
                     <td class="col-xs-6">{{ voto.tema }}</td>
-                    <td class="col-xs-3">{{ voto.value }}</td>
+                    <td class="col-xs-3">{{ voto.value_name }}</td>
                     <td class="col-xs-3">{{ getValueEleitor($index) }}</td>
                 </tr>
             </table>
@@ -248,122 +251,231 @@
                     </div> <!-- col -->
 
 
-                    <div class="col-sm-7"  id="deputados">
-                        <!--<div class="container">-->
+                    <tabset class="col-sm-7" id="deputados">
+                        <tab>
+                            <tab-heading>
+                                <h3 class="h-sempadding">Deputados</h3>
+                            </tab-heading>
 
-                        <div>
-                            <h2>Deputados</h2>
-                        </div>
-
-                        <form class="form-inline">
-                            <div class="form-group">
-                                <h3>Estado:
-                                <select  ng-model="estadoSelecionado" class="form-control"
-                                         ng-options="estado.uf for estado in estados">                                         " >
-                                    <option value="">TODOS</option>
-                                </select>
-                                </h3>
-                                <!--<input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">-->
-                            </div>
-                            <div class="form-group">
-                                <h3>Partido:
-                                    <select  ng-model="partidoSelecionado" class="form-control"
-                                             ng-options="partido.partido for partido in partidos">
-                                        <option value="">TODOS</option>
-                                    </select>
-                                </h3>
-                                <!--<input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">-->
-                            </div>
-                            <div class="form-group">
-                                <h3>Nome:
-                                    <input ng-model="search.nome" class="form-control">
-                                </h3>
-                            </div>
-                            <div class="form-group">
-                                <h3>Deputados : {{deput_filtrados.length}}</h3>
-                            </div>
-                            <!--<button type="submit" class="btn btn-default">Send invitation</button>-->
                             <div>
-                                <div class="checkbox">
+                                <!--<div>-->
+                                    <!--<h2>Deputados</h2>-->
+                                <!--</div>-->
 
-                                <label class="form-group">
-                                    <input type="checkbox" ng-model="mostrarPoucos"   >
-                                    <span tooltip="Permite visualizar também os deputados com poucas
-                                votações (deputados com menos da metade das que você opiniou)."  tooltip-placement="{{getTooltipPlacementRight()}}">
-                                      Mostrar deputados com poucas votações.
-                                    </span>
-                                </label>
-                                </div>
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <h3>Estado:
+                                            <select  ng-model="estadoSelecionado" class="form-control"
+                                                     ng-options="estado.uf for estado in estados">                                         " >
+                                                <option value="">TODOS</option>
+                                            </select>
+                                        </h3>
+                                        <!--<input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">-->
+                                    </div>
+                                    <div class="form-group">
+                                        <h3>Partido:
+                                            <select  ng-model="partidoSelecionado" class="form-control"
+                                                     ng-options="partido.partido | uppercase for partido in partidos">
+                                                <option value="">TODOS</option>
+                                            </select>
+                                        </h3>
+                                        <!--<input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">-->
+                                    </div>
+                                    <div class="form-group">
+                                        <h3>Nome:
+                                            <input ng-model="search.nome" class="form-control">
+                                        </h3>
+                                    </div>
+                                    <div class="form-group">
+                                        <h3>Deputados : {{deput_filtrados.length}}</h3>
+                                    </div>
+                                    <!--<button type="submit" class="btn btn-default">Send invitation</button>-->
+                                    <div>
+                                        <div class="checkbox">
 
-                            </div>
+                                            <label class="form-group">
+                                                <input type="checkbox" ng-model="mostrarPoucos"   >
+                                                <span tooltip="Permite visualizar também os deputados com poucas
+                                            votações (deputados com menos da metade das que você opiniou).">
+                                                  Mostrar deputados com poucas votações.
+                                                </span>
+                                            </label>
+                                        </div>
 
-
-                        </form>
-
-                        <br>
-                        <div class="list-group">
-
-                            <div ng-if="deput_filtrados.length == 0">
-                                <h2> Nenhum deputado selecionado. </h2>
-                            </div>
-                            <div class="row" ng-repeat="deputado in (deput_filtrados =
-                            (deputados | orderBy:['-score','-sum','nome']
-                            | filter:estadoSelecionado  | filter:filtroPartido | filter:search | minimoVotacoes:this)
-                            | startFrom:(currentPage-1):this| limitTo:pageSize)">
-
-                                <div class="col-lg-5 text-left">
-
-                                    <span class="badge">{{deputado.partido}}/{{deputado.uf}}</span>
-                                    <label>
-                                        {{deputado.nome}}
-                                        <a href=""
-                                           ng-click="votos_deputados(deputado)">
-                                            <span class="glyphicon glyphicon-info-sign"></span>
-                                        </a>
-
-                                    </label>
-
-
-                                </div>
-
-                                <div class="col-lg-7 text-left" ng-if="deputado.score >= 0">
-                                    <div class="col-xs-11 text-left" ng-if="deputado.score >= 0">
-
-                                    <progressbar value="deputado.score" type="{{typeProgessBar(deputado.score)}}"
-                                                 tooltip-html-unsafe="{{getTooltipProgressBar(deputado)}}"
-                                                 popover-trigger="mouseenter">
-                                        <span style="color:white; white-space:nowrap;">
-                                             <strong>
-                                                    {{deputado.score | number : 2 }}%
-                                             </strong>
-                                        </span></progressbar>
                                     </div>
 
-                                    <div class="col-xs-1 text-left" ng-if="deputado.score >= 0">
-                                        <span class="badge" ng-class="'progress-bar-'+typeProgessBar(deputado.score)" tooltip-html-unsafe="{{tooltipBadgeText(deputado)}}"
+
+                                </form>
+
+                                <br>
+                                <div class="list-group">
+
+                                    <div ng-if="deput_filtrados.length == 0">
+                                        <h2> Nenhum deputado selecionado. </h2>
+                                    </div>
+                                    <div class="row" ng-repeat="deputado in (deput_filtrados =
+                                    (deputados | orderBy:['-score','-sum','nome']
+                                    | filter:estadoSelecionado  | filter:partidoSelecionado:true
+                                    | filter:search | minimoVotacoes:this)
+                                    | startFrom:(currentPage-1):this| limitTo:pageSize)">
+
+                                        <div class="col-lg-5 text-left">
+
+                                            <span class="badge">{{deputado.partido | uppercase}}/{{deputado.uf}}</span>
+                                            <label>
+                                                {{deputado.nome}}
+                                                <a href=""
+                                                   ng-click="votos_deputados(deputado,'Deputado')">
+                                                    <span class="glyphicon glyphicon-info-sign"></span>
+                                                </a>
+
+                                            </label>
+
+
+                                        </div>
+
+                                        <div class="col-lg-7 text-left" ng-if="deputado.score >= 0">
+                                            <div class="col-xs-11 text-left" ng-if="deputado.score >= 0">
+
+                                                <progressbar value="deputado.score" type="{{typeProgessBar(deputado.score)}}"
+                                                             tooltip-html-unsafe="{{getTooltipProgressBar(deputado)}}"
+                                                             popover-trigger="mouseenter">
+                                        <span style="color:white; white-space:nowrap;">
+                                             <strong>
+                                                 {{deputado.score | number : 2 }}%
+                                             </strong>
+                                        </span></progressbar>
+                                            </div>
+
+                                            <div class="col-xs-1 text-left" ng-if="deputado.score >= 0">
+                                        <span class="badge" ng-class="'progress-bar-'+typeProgessBar(deputado.score)" tooltip-html-unsafe="{{tooltipBadgeText(deputado,'deputado')}}"
                                               tooltip-placement="{{getTooltipPlacement()}}">
                                             {{deputado.sum + "/" + deputado.total}}
                                         </span>
-                                    </div>
+                                            </div>
 
-                                </div>
-                                <div class="col-lg-7 text-left" ng-if="deputado.score < 0" style="padding-bottom:10px">
-                                    <span class="badge progress-bar-danger" tooltip="{{tooltip_semvalor}}"
+                                        </div>
+                                        <div class="col-lg-7 text-left" ng-if="deputado.score < 0" style="padding-bottom:10px">
+                                    <span class="badge progress-bar-danger" tooltip="{{tooltip_semvalor}}" tooltip-placement="{{getTooltipPlacementRight()}}"
                                           ng-if="deputado.nome != 'Eduardo Cunha'">Sem Valor</span>
-                                    <span class="badge progress-bar-danger" tooltip="{{tooltip_art17}}"
+                                    <span class="badge progress-bar-danger" tooltip="{{tooltip_art17}}" tooltip-placement="{{getTooltipPlacementRight()}}"
                                           ng-if="deputado.nome == 'Eduardo Cunha'">Art. 17</span>
 
+                                        </div>
+
+                                    </div>
+
+
+                                    <pagination total-items="totalItems" items-per-page="pageSize" ng-model="currentPage"
+                                                class="pagination-sm" boundary-links="true" max-size="5" first-text="Início" last-text="Fim"
+                                                previous-text="Ant." next-text="Próx." rotate="false"></pagination>
+
                                 </div>
+                            </div>                        </tab>
+                        <tab>
+                            <tab-heading>
+                                <h3 class="h-sempadding">Partidos</h3>
+                            </tab-heading>
+                            <div id="partidos">
+                                <!--<div>-->
+                                    <!--<h2>Partidos</h2>-->
+                                <!--</div>-->
 
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <h3>Nome:
+                                            <input ng-model="search_partido.nome" class="form-control">
+                                        </h3>
+                                    </div>
+                                    <div class="form-group">
+                                        <h3>Partidos : {{partido_filtrados.length}}</h3>
+                                    </div>
+
+                                    <div>
+                                        <div class="checkbox">
+
+                                            <label class="form-group">
+                                                <input type="checkbox" ng-model="mostrarPoucosP"   >
+                                                <span tooltip="Permite visualizar também os partidos com poucas
+                                            orientações de voto (partidos com menos da metade das que você opiniou).">
+                                                  Mostrar partidos com poucas orientações.
+                                                </span>
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                </form>
+
+                                <br>
+                                <div class="list-group">
+
+                                    <div ng-if="partido_filtrados.length == 0">
+                                        <h2> Nenhum partido selecionado. </h2>
+                                    </div>
+                                    <div class="row" ng-repeat="partido in (partido_filtrados =
+                                        (partidos_votos | orderBy:['-score','-sum','partido']
+                                        | filter:search_partido | minimoVotacoesP:this)
+                                        | startFromP:(currentPageP-1):this| limitTo:pageSize)">
+
+                                        <div class="col-lg-3 text-left">
+
+                                            <label>
+                                                {{partido.nome | uppercase}}
+                                                <a href=""
+                                                ng-click="votos_deputados(partido,'Partido')">
+                                                <span class="glyphicon glyphicon-info-sign"></span>
+                                                </a>
+
+                                            </label>
+
+
+                                        </div>
+
+                                        <div class="col-lg-9 text-left" ng-if="partido.score >= 0">
+                                            <div class="col-xs-11 text-left">
+
+                                                <progressbar value="partido.score" type="{{typeProgessBar(partido.score)}}"
+                                                             tooltip-html-unsafe="{{getTooltipProgressBar(partido)}}"
+                                                                    popover-trigger="mouseenter">
+                                                    <span style="color:white; white-space:nowrap;">
+                                                         <strong>
+                                                             {{partido.score | number : 2 }}%
+                                                         </strong>
+                                                    </span>
+                                                </progressbar>
+                                            </div>
+
+                                            <div class="col-xs-1 text-left">
+                                            <span class="badge" ng-class="'progress-bar-'+typeProgessBar(partido.score)"
+                                                  tooltip-html-unsafe="{{tooltipBadgeText(partido,'partido')}}"
+                                                  tooltip-placement="{{getTooltipPlacement()}}">
+                                            {{partido.sum + "/" + partido.total}}
+                                            </span>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-lg-7 text-left" ng-if="partido.score < 0" style="padding-bottom:10px">
+                                            <span class="badge progress-bar-danger" tooltip="{{tooltip_semvalorP}}"  tooltip-placement="{{getTooltipPlacementRight()}}">
+                                                Sem Valor
+                                            </span>
+                                        </div>
+
+                                    </div>
+
+
+                                    <pagination total-items="totalItemsP" items-per-page="pageSize" ng-model="currentPageP"
+                                                class="pagination-sm" boundary-links="true" max-size="5" first-text="Início" last-text="Fim"
+                                                previous-text="Ant." next-text="Próx." rotate="false"></pagination>
+
+                                </div>
                             </div>
+                        </tab>
+                    </tabset>
 
 
-                                <pagination total-items="totalItems" items-per-page="pageSize" ng-model="currentPage"
-                                 class="pagination-sm" boundary-links="true" max-size="5" first-text="Início" last-text="Fim"
-                                            previous-text="Ant." next-text="Próx." rotate="false"></pagination>
 
-                        </div>
-                    </div>
+
                 </div><!--row -->
             </div>  <!--container -->
 
@@ -379,7 +491,7 @@
                     <h2>Como o cálculo é feito?</h2>
                     <ol>
                         <li>
-                            Você dá sua opinião sobre temas.
+                            Você dá sua opinião sobre os temas.
                         </li>
                         <li>
                             São selecionados os votos dos deputados nos temas que você opinou (são excluídos as abstenções e obstruções).
@@ -399,7 +511,20 @@
                         o tema B, que está presente tanto nas suas opiniões quanto nos votos do deputado. Desta maneira,
                         nos temas em que você e o deputado opinaram, ele lhe representa em 100%.
                     </p>
+                    <br><br>
+                    <h4>Cálculo envolvendo os partidos</h4>
+                    <ul>
+                        <li>
+                            Em cada votação, o partido dá uma orientação de voto aos seus deputados.
+                            Utilizamos esta orientação no cálculo.
+                        </li>
+                        <li>
+                            O cálculo que fizemos é similar ao do deputado. Porém, além da exclusão das abstenções e
+                            obstruções, excluímos quando o partido não dá sua orientação (termo utilizado: liberado).
+                        </li>
 
+
+                    </ul>
 
                 </div>
             </div>
