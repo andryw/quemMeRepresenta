@@ -534,6 +534,46 @@
         </div>
     </section>
 
+
+    <hr>
+
+
+    <section id="saiunamidia" class="top-buffer">
+        <div class="container">
+
+            <h2>QMR na mídia</h2>
+
+
+                <div class="row" ng-repeat="site in sites | startFromMidia:(currentPageMidia-1):this| limitTo:pageSizeMidia">
+                    <article>
+
+                        <div class="col-md-4">
+                            <a href="{{site.url}}" target='_blank'>
+
+                                <img src="{{'img/midia/'+site.image}}"
+                                     class="img-responsive" width="200"
+                                     title="{{site.title}}">
+                            </a>
+                        </div>
+                        <div class="col-md-8">
+                            <a href="{{site.url}}" target='_blank'>
+                                <h3>
+                                    {{site.title}}
+                                </h3>
+                            </a>
+                        </div>
+                    </article>
+
+
+                </div>
+
+            <pagination total-items="totalItemsMidia" items-per-page="pageSizeMidia" ng-model="currentPageMidia"
+                        class="pagination-sm" boundary-links="true" max-size="5" first-text="Início" last-text="Fim"
+                        previous-text="Ant." next-text="Próx." rotate="false"></pagination>
+
+        </div>
+    </section>
+
     <hr>
 
     <!-- HoC -->
