@@ -93,6 +93,9 @@
                         <a href="#calculo">Cálculo</a>
                     </li>
                     <li>
+                        <a href="#midia">QMR na Mídia</a>
+                    </li>
+                    <li>
                         <a href="#hoc">House of Cunha</a>
                     </li>
                     <li>
@@ -538,33 +541,31 @@
     <hr>
 
 
-    <section id="saiunamidia" class="top-buffer">
+    <section id="midia" class="top-buffer">
         <div class="container">
 
             <h2>QMR na mídia</h2>
 
 
                 <div class="row" ng-repeat="site in sites | startFromMidia:(currentPageMidia-1):this| limitTo:pageSizeMidia">
-                    <article>
+                    <article class="top-buffer-50 ">
 
-                        <div class="col-md-4">
+                        <div class="col-md-2 vcenter">
                             <a href="{{site.url}}" target='_blank'>
 
                                 <img src="{{'img/midia/'+site.image}}"
-                                     class="img-responsive" width="200"
+                                     class="img-rounded" width="150"
                                      title="{{site.title}}">
                             </a>
-                        </div>
-                        <div class="col-md-8">
-                            <a href="{{site.url}}" target='_blank'>
+                        </div><!--
+                        --><div class="col-md-10 vcenter">
+                            <a href="{{site.url}}" target='_blank' class="">
                                 <h3>
                                     {{site.title}}
                                 </h3>
                             </a>
                         </div>
                     </article>
-
-
                 </div>
 
             <pagination total-items="totalItemsMidia" items-per-page="pageSizeMidia" ng-model="currentPageMidia"
