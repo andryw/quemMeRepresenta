@@ -46,3 +46,14 @@
     padding: 0px;
 }
 /*.btn-default:hover{color:#ffffff;background-color:#232628;border-color:#1e2023}*/
+
+.top-buffer-50 {
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
