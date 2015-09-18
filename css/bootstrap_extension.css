@@ -57,3 +57,19 @@
     vertical-align: middle;
     float: none;
 }
+
+
+#navigation {
+    background-color: #1C609C;
+}
+
+#header {
+    background-color: #1D7087;
+}
+
+#votacao {
+    background-color: #ffffff;
+}
+#deputados {
+    background-color: #DADAD9;
+}
