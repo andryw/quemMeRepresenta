@@ -20,7 +20,6 @@ header =  'codigo_sessao\tsigla_casa\tcodigo_sessao_legislativa\ttipo_sessao\tnu
 fileToWrite.write(header + '\n')
 
 for file in files:
-
     try:
         xmldoc = minidom.parse(file)
     except:
@@ -31,7 +30,7 @@ for file in files:
         else:
             print "ERROR: >>>" + file
             continue
-            
+
     for votacoes in xmldoc.getElementsByTagName('Votacoes'):
         for votacao in votacoes.getElementsByTagName('Votacao'):
             to_print = []
