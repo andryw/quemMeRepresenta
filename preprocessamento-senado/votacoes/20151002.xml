@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding='UTF-8'?>
+<ListaVotacoes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://legis.senado.gov.br/dadosabertos/dados/ListaVotacoesv2.xsd">
+   <Metadados>
+      <Versao>21/11/2015 12:06:12</Versao><VersaoServico>2</VersaoServico><DescricaoDataSet>Votações Nominais
+      
+      Descrição:
+      Contém as sessões de votação em plenário e os votos registrados.
+      
+      Categoria:
+      Plenário
+      
+      Periodicidade de atualização:
+      De 3 em 3 horas no horário comercial
+      
+      Links:
+      XML
+      http://www.senado.gov.br/atividade/dadosabertos/dados/ListaVotacoes.xml
+      XSD
+      http://www.senado.gov.br/atividade/dadosabertos/dados/ListaVotacoes.xsd
+      
+      </DescricaoDataSet>
+   </Metadados>
+</ListaVotacoes>
