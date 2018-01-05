@@ -1,118 +1,147 @@
 [
   {
+    "Tema":"Prosseguimento da 2ª denúncia contra Temer",
+    "Pergunta":"prosseguimento da 2ª denúncia contra o Temer?",
+    "descr":"Prosseguimento da 2ª denúncia onde o Michel Temer é acusado de corrução passiva pelo Janot.",
+    "id":"24"
+  },
+  {
     "Tema":"Prosseguimento da denuncia contra Temer",
     "Pergunta":"prosseguimento da denúncia contra o Temer?",
-    "descr":"Prosseguimento da denúncia onde o Michel Temer é acusado de corrução passiva pelo Janot."
+    "descr":"Prosseguimento da denúncia onde o Michel Temer é acusado de corrução passiva pelo Janot.",
+    "id":"23"
   },
   {
     "Tema":"Lei trabalhista",
     "Pergunta":"reforma da lei trabalhista?",
-    "descr":"Alguns pontos da reforma da CLT: acordos coletivos na empresa entre patrão e funcionário poderão ser feitos independentemente do que prevê a lei trabalhista; mulher grávida ou lactante poderá trabalhar em ambientes considerados insalubre, desde que apresente um atestado médico que garanta que não há risco ao bebê nem à mãe; intervalo de almoço de no mínimo 30 minutos; fim da obrigatoriedade da contribuiçao sindical; novas modalidades de contratação: trabalho intermitente e home-office. "
+    "descr":"Alguns pontos da reforma da CLT: acordos coletivos na empresa entre patrão e funcionário poderão ser feitos independentemente do que prevê a lei trabalhista; mulher grávida ou lactante poderá trabalhar em ambientes considerados insalubre, desde que apresente um atestado médico que garanta que não há risco ao bebê nem à mãe; intervalo de almoço de no mínimo 30 minutos; fim da obrigatoriedade da contribuiçao sindical; novas modalidades de contratação: trabalho intermitente e home-office. ",
+    "id":"22"
   },
   {
     "Tema":"Terceirização total (2017)",
     "Pergunta":"emenda da terceirização (votação de 2017)?",
-    "descr":"O projeto de lei aprovado permite a terceirização inclusive da atividade-fim de uma empresa. Por exemplo, um hospital poderá terceirizar não apenas o serviço de limpeza (que já acontece hoje), mas a contratação de seus enfermeiros e médicos."
+    "descr":"O projeto de lei aprovado permite a terceirização inclusive da atividade-fim de uma empresa. Por exemplo, um hospital poderá terceirizar não apenas o serviço de limpeza (que já acontece hoje), mas a contratação de seus enfermeiros e médicos.",
+    "id":"21"
   },
   {
     "Tema":"Impeachment",
     "Pergunta":"impeachment da presidente Dilma?",
-    "descr":"Abertura de processo de Impeachment, ocorrido no dia 17/04/2016."
+    "descr":"Abertura de processo de Impeachment, ocorrido no dia 17/04/2016.",
+    "id":"20"
   },
   {
     "Tema":"Cobrança de cursos em universidades públicas",
     "Pergunta":"cobrança de cursos de pós-graduação lato sensu em universidades públicas?",
-    "descr":"Segundo o texto, o ensino público superior de graduação e de pós-graduação acadêmica continuam gratuitos, mas as instituições poderão cobrar pelos cursos de extensão, de pós-graduação lato sensu (como MBAs) e de mestrado profissional. A exceção será para os programas de residência (em saúde) e de formação de profissionais na área de ensino, que continuarão gratuitos."
+    "descr":"Segundo o texto, o ensino público superior de graduação e de pós-graduação acadêmica continuam gratuitos, mas as instituições poderão cobrar pelos cursos de extensão, de pós-graduação lato sensu (como MBAs) e de mestrado profissional. A exceção será para os programas de residência (em saúde) e de formação de profissionais na área de ensino, que continuarão gratuitos.",
+    "id":"19"
   },
   {
     "Tema":"Tributação serviços de internet",
     "Pergunta":"tributação de serviços de internet (novas regras do ISS)?",
-    "descr":"Novas regras para o ISS (Imposto sobre Serviços). O texto-base fixa em 2% a alíquota do ISS (Imposto sobre Serviços), tentando acabar com a guerra fiscal entre os municípios. Além disso, O projeto inclui novos serviços na lista daqueles que podem ser tributados como aplicação de tatuagens, piercings e congêneres; vigilância e monitoramento de bens móveis; e disponibilização de conteúdos de áudio, vídeo, imagem e texto em páginas eletrônicas, exceto no caso de jornais, livros e periódicos."
+    "descr":"Novas regras para o ISS (Imposto sobre Serviços). O texto-base fixa em 2% a alíquota do ISS (Imposto sobre Serviços), tentando acabar com a guerra fiscal entre os municípios. Além disso, O projeto inclui novos serviços na lista daqueles que podem ser tributados como aplicação de tatuagens, piercings e congêneres; vigilância e monitoramento de bens móveis; e disponibilização de conteúdos de áudio, vídeo, imagem e texto em páginas eletrônicas, exceto no caso de jornais, livros e periódicos.",
+    "id":"18"
   },
   {
     "Tema":"Terrorismo",
     "Pergunta":"definição aprovada do crime de terrorismo?",
-    "descr":"A votação do projeto de lei tipifica o crime de terrorismo. O texto aprovado tipifica o terrorismo como a prática, por um ou mais indivíduos, de atos por razões de xenofobia, discriminação ou preconceito de raça, cor, etnia ou religião, com a finalidade de provocar terror social ou generalizado, expondo a perigo pessoa, patrimônio, a paz pública ou a incolumidade pública. O texto prevê pena de reclusão de 12 a 30 anos em regime fechado, sem prejuízo das penas relativas a outras infrações decorrentes desse crime. "
+    "descr":"A votação do projeto de lei tipifica o crime de terrorismo. O texto aprovado tipifica o terrorismo como a prática, por um ou mais indivíduos, de atos por razões de xenofobia, discriminação ou preconceito de raça, cor, etnia ou religião, com a finalidade de provocar terror social ou generalizado, expondo a perigo pessoa, patrimônio, a paz pública ou a incolumidade pública. O texto prevê pena de reclusão de 12 a 30 anos em regime fechado, sem prejuízo das penas relativas a outras infrações decorrentes desse crime. ",
+    "id":"17"
   },
   {
     "Tema":"Infaticídio indígena",
     "Pergunta":"combate ao infanticídio indígena?",
-    "descr":"O projeto aprovado trata de medidas para combater práticas tradicionais nocivas em sociedades indígenas, como o infanticídio, abuso sexual, estupro individual ou coletivo, escravidão, tortura, abandono de vulneráveis e violência doméstica. Além disso, o projeto trata da proteção dos direitos fundamentais de crianças, adolescentes, mulheres e idosos vulneráveis nessas comunidades"
+    "descr":"O projeto aprovado trata de medidas para combater práticas tradicionais nocivas em sociedades indígenas, como o infanticídio, abuso sexual, estupro individual ou coletivo, escravidão, tortura, abandono de vulneráveis e violência doméstica. Além disso, o projeto trata da proteção dos direitos fundamentais de crianças, adolescentes, mulheres e idosos vulneráveis nessas comunidades",
+    "id":"16"
   },
   {
     "Tema":"Maioridade 1",
     "Pergunta":"redução da maioridade penal (1ª votação)?",
-    "descr":"A redução da maioridade penal para 16 anos se enquadria nos seguintes casos: crimes hediondos (como estupro), homicídio doloso, lesão corporal grave ou lesão corporal seguida de morte, tráfico de drogas e roubo qualificado"
+    "descr":"A redução da maioridade penal para 16 anos se enquadria nos seguintes casos: crimes hediondos (como estupro), homicídio doloso, lesão corporal grave ou lesão corporal seguida de morte, tráfico de drogas e roubo qualificado",
+    "id":"15"
   },
   {
     "Tema":"Maioridade 2",
     "Pergunta":"redução da maioridade penal (2ª votação - excluindo tráfico de drogas e roubo qualificado)?",
-    "descr":"A redução da maioridade penal para 16 anos se enquadria nos seguintes casos: crimes hediondos (como estupro), homicídio doloso e lesão corporal grave ou lesão corporal seguida de morte."
+    "descr":"A redução da maioridade penal para 16 anos se enquadria nos seguintes casos: crimes hediondos (como estupro), homicídio doloso e lesão corporal grave ou lesão corporal seguida de morte.",
+    "id":"14"
   },
   {
     "Tema":"Financiamento privado para partidos",
     "Pergunta":"financiamento privado de campanhas só para partidos políticos?",
-    "descr":"Financiamento privado de campanhas para partidos políticos. Não é permitido o financiamento para candidatos."
+    "descr":"Financiamento privado de campanhas para partidos políticos. Não é permitido o financiamento para candidatos.",
+    "id":"13"
   },
   {
     "Tema":"Financiamento privado para partidos e candidatos",
     "Pergunta":"financiamento privado de campanhas para partidos políticos e candidatos?",
-    "descr":"Financiamento privado de campanhas para partidos políticos e candidatos."
+    "descr":"Financiamento privado de campanhas para partidos políticos e candidatos.",
+    "id":"12"
   },
   {
     "Tema":"Terceirização",
     "Pergunta":"emenda da terceirização?",
-    "descr":"Entre outros pontos: terceirizar a atividade-fim; redução de 24 meses para 12 meses a chamada quarentena, período que o ex-empregado de uma empresa deve cumprir a fim de poder prestar serviços à mesma empresa por uma contratada de terceirização. Para saber mais: http://goo.gl/RDRhGT"
+    "descr":"Entre outros pontos: terceirizar a atividade-fim; redução de 24 meses para 12 meses a chamada quarentena, período que o ex-empregado de uma empresa deve cumprir a fim de poder prestar serviços à mesma empresa por uma contratada de terceirização. Para saber mais: http://goo.gl/RDRhGT",
+    "id":"11"
   },
   {
     "Tema":"Distritao",
     "Pergunta":"sistema de voto Distritão?",
-    "descr":"Neste sistema, Estados e o Distrito Federal são transformados em distritos eleitorais e os candidatos eleitos são aqueles que conseguem o maior número de votos em cada distrito (semelhante nas eleições para presidente, governador e prefeito, onde quem tem o maior número de votos é eleito). Atualmente o sistema em vigor é o Sistema Proporcional. Para saber mais sobre o sitema proporcional: http://goo.gl/BsdeHx . Para saber mais sobre a lei: http://goo.gl/02Hbnb"
+    "descr":"Neste sistema, Estados e o Distrito Federal são transformados em distritos eleitorais e os candidatos eleitos são aqueles que conseguem o maior número de votos em cada distrito (semelhante nas eleições para presidente, governador e prefeito, onde quem tem o maior número de votos é eleito). Atualmente o sistema em vigor é o Sistema Proporcional. Para saber mais sobre o sitema proporcional: http://goo.gl/BsdeHx . Para saber mais sobre a lei: http://goo.gl/02Hbnb",
+    "id":"10"
   },
   {
     "Tema":"Transgênico",
     "Pergunta":"retirada das embalagens o aviso de produto transgênico?",
-    "descr":"Não é obrigatório os avisos de produtos transgênicos nas embalagens."
+    "descr":"Não é obrigatório os avisos de produtos transgênicos nas embalagens.",
+    "id":"9"
   },
   {
     "Tema":"Reeleição",
     "Pergunta":"fim da reeleição?",
-    "descr":"Fim da reeleição para presidente da República, governador e prefeito"
+    "descr":"Fim da reeleição para presidente da República, governador e prefeito",
+    "id":"8"
   },
   {
     "Tema":"Cota para mulheres legislativo",
     "Pergunta":"cota para mulheres no legislativo?",
-    "descr":"O texto previa uma espécie de reserva de vagas para as mulheres nas próximas três legislaturas. Na primeira delas, de 10% do total de cadeiras na Câmara dos Deputados, nas assembleias legislativas estaduais, nas câmaras de vereadores e na Câmara Legislativa do Distrito Federal. Na segunda legislatura, o percentual subiria para 12% e, na terceira, para 15%."
+    "descr":"O texto previa uma espécie de reserva de vagas para as mulheres nas próximas três legislaturas. Na primeira delas, de 10% do total de cadeiras na Câmara dos Deputados, nas assembleias legislativas estaduais, nas câmaras de vereadores e na Câmara Legislativa do Distrito Federal. Na segunda legislatura, o percentual subiria para 12% e, na terceira, para 15%.",
+    "id":"7"
   },
   {
     "Tema":"Pensão",
     "Pergunta":"restrição de acesso a pensão por morte?",
-    "descr":"Pelo texto aprovado, os cônjuges só poderão requerer pensão por morte do companheiro se o tempo de união estável ou casamento for de mais de dois anos e o segurado tiver contribuído para o INSS por, no mínimo, um ano e meio. Antes, não era exigido tempo mínimo de contribuição para que os dependentes tivessem direito ao benefício, mas era necessário que, na data da morte, o segurado estivesse contribuindo para a Previdência Social. Para saber mais: http://goo.gl/XS62zP"
+    "descr":"Pelo texto aprovado, os cônjuges só poderão requerer pensão por morte do companheiro se o tempo de união estável ou casamento for de mais de dois anos e o segurado tiver contribuído para o INSS por, no mínimo, um ano e meio. Antes, não era exigido tempo mínimo de contribuição para que os dependentes tivessem direito ao benefício, mas era necessário que, na data da morte, o segurado estivesse contribuindo para a Previdência Social. Para saber mais: http://goo.gl/XS62zP",
+    "id":"6"
   },
 
   {
     "Tema":"Seguro Desemprego",
     "Pergunta":"endurecimento do acesso ao seguro-desemprego?",
-    "descr":"Com a lei fica mais difícil o acesso ao seguro-desemprego, ao abono salarial e ao seguro-defeso. Por exemplo: antes era necessário que um empregado tivesse um tempo de trabalho de no mínimo 6 meses para solicitar o seguro-desemprego no ato da demissão. Com a lei esse tempo mínimo passou para 1 ano. O objetivo da lei é reduzir os gastos. Para saber mais: http://goo.gl/H0dCtH"
+    "descr":"Com a lei fica mais difícil o acesso ao seguro-desemprego, ao abono salarial e ao seguro-defeso. Por exemplo: antes era necessário que um empregado tivesse um tempo de trabalho de no mínimo 6 meses para solicitar o seguro-desemprego no ato da demissão. Com a lei esse tempo mínimo passou para 1 ano. O objetivo da lei é reduzir os gastos. Para saber mais: http://goo.gl/H0dCtH",
+    "id":"5"
   },
   {
     "Tema":"Tempo Mandato",
     "Pergunta":"tempo de mandato de 5 anos?",
-    "descr":"Mudança no tempo de mandato dos cargos do executivo (prefeito, governador e presidente) para 5 anos. Atualmente o mandato é de 4 anos."
+    "descr":"Mudança no tempo de mandato dos cargos do executivo (prefeito, governador e presidente) para 5 anos. Atualmente o mandato é de 4 anos.",
+    "id":"4"
   },
   {
     "Tema":"Voto Facultativo",
     "Pergunta":"voto facultativo?",
-    "descr":"Não obrigatoriedade do voto."
+    "descr":"Não obrigatoriedade do voto.",
+    "id":"3"
   },
   {
     "Tema":"Voto impresso",
     "Pergunta":"voto impresso?",
-    "descr":"Impressão do voto."
+    "descr":"Impressão do voto.",
+    "id":"2"
   },
   {
     "Tema":"Coincidência reeleição",
     "Pergunta":"coincidência da eleição?",
-    "descr":"As eleições municipais, estaduais e federais seriam no mesmo ano."
+    "descr":"As eleições municipais, estaduais e federais seriam no mesmo ano.",
+    "id":"1"
   }
 ]
