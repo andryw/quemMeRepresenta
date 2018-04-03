@@ -44,11 +44,35 @@
         ga('send', 'pageview');
 
     </script>
+                        <script src="//d3js.org/d3.v3.min.js"></script>
 
     <script type="text/javascript" src="js/parse.min.js"></script>
 
     <!-- -->
 </head>
+<style>
+
+.blink {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% { opacity: 0.0; }
+}
+
+
+.link {
+  stroke: #ccc;
+}
+
+.node text {
+  pointer-events: none;
+  font: 20px sans-serif;
+}
+
+
+
+</style>
 
 <body ng-controller="VotacoesCtrl">
 
@@ -89,6 +113,9 @@
                     <li>
                         <a href="#deputados">Deputados</a>
                     </li>
+                     <li>
+                        <a href="#analysis">Análises</a>
+                    </li>
                     <li>
                         <a href="#calculo">Cálculo</a>
                     </li>
@@ -121,7 +148,12 @@
                     Você pode também selecionar seu estado ou filtrar pelo nome.
                     <br>
                     <br>
+                    <div style="font-size: 20px">
+                        <b> Novidade: <a href="#analysis"><u>Analises - Quais partidos mais parecidos?</u></a>
+                        </b> <span class="glyphicon glyphicon-hand-left blink"></span>
+                    </div>
                     <br>
+
                     <div style="font-size: 20px">
                         <span class="glyphicon glyphicon-ok"></span>
                         <b> Para acompanhar as novas votações curta a nossa página no
@@ -479,6 +511,58 @@
 
     <hr>
     <!-- About Calculo -->
+    <section id="analysis" class="top-buffer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Análises - partidos mais parecidos</h2>
+                    <div id="partidos_d3" class="col-lg-7" style="background-color:white"></div>
+                <div class="col-lg-5">
+                    <h3>Como o grafico foi feito?</h3>
+                    <ul>
+                       <li> As análises foram feitas baseadas nas votações presentes no Quem me representa.</li>
+                       <li>A similaridade entre os partidos foi definida como total de orientações iguais dividido
+                           pelo total de votações que ambos os partidos participaram.</li>
+                        <li> No gráfico estão presentes os partidos que participaram de pelo menos 5 votações e os
+                            partidos que estão ligados são partidos que possuem similaridade mínima de 75%.
+                            Ou seja, em pelo menos 75% das votações eles concordam.</li>
+                    </ul>
+
+                    <h3>Discussão</h3>
+
+                    Dá para notar claramente 4 grupos:
+                    <ol>
+                        <li>
+                            <b><u> O grupo da esquerda (vermelho)</u></b>, formado pelo PT, Rede, PSOL, PCdoB e PDT. Este grupo está desconectado
+                            dos demais partidos. Porém internamente ele não é tão coeso,
+                            que mostra que cada partido de esquerda tem sua bandeira.
+                        </li>
+                        <li>
+                            O grupo verde é formado por <b><u> partidos menores</u></b>. Este grupo é bem coeso, mostrando que eles
+                            votam de forma quase igual
+                        </li>
+                        <li>
+                            <b><u> O grupo preto é o grupo formado pelo PMDB </u></b>.
+                        </li>
+                        <li>
+                            <b><u> O grupo azul é o grupo do PSDB</u></b> (junto com solidariedade e DEM). Como em boa parte do período
+                            2015-2018 o PSDB foi oposição, enquanto o PMDB era situação, ele está um pouco afastado do
+                            grupo do PMDB. O partido que "conecta" os dois grupos é o DEM.
+                        </li>
+                    </ol>
+
+
+                </div>
+
+            </div>
+            <div class="row">
+
+            </div>
+        </div>
+    </section>
+
+    <hr>
+    <!-- About Calculo -->
     <section id="calculo" class="top-buffer">
         <div class="container">
             <div class="row">
@@ -661,6 +745,60 @@
     <script src="js/ui-bootstrap-tpls-0.13.2.min.js"></script>
     <script src="js/underscore-min.js"></script>
     <script src="lib/controllers.js"></script>
+    <script>
+
+    var width = 600,
+        height = 700
+
+    var svg = d3.select("#partidos_d3").append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+    var force = d3.layout.force()
+        <!--.gravity(0.10)-->
+        .distance(100)
+        .charge(-500)
+        .size([width, height]);
+
+    d3.json("dados/data.json", function(error, json) {
+      if (error) throw error;
+
+      force
+          .nodes(json.nodes)
+          .links(json.links)
+          .start();
+
+      var link = svg.selectAll(".link")
+          .data(json.links)
+        .enter().append("line")
+          .attr("class", "link");
+
+      var node = svg.selectAll(".node")
+          .data(json.nodes)
+        .enter().append("g")
+          .attr("class", "node")
+          .call(force.drag);
+
+        node.append("circle")
+          .attr("r", 9)
+          .attr("fill", function(d) { return d.group; })
+
+      node.append("text")
+          .attr("dx", 12)
+          .attr("dy", ".35em")
+          .text(function(d) { return d.id })
+
+      force.on("tick", function() {
+        link.attr("x1", function(d) { return d.source.x; })
+            .attr("y1", function(d) { return d.source.y; })
+            .attr("x2", function(d) { return d.target.x; })
+            .attr("y2", function(d) { return d.target.y; });
+
+        node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+      });
+    });
+
+    </script>
 
 
 </body>
