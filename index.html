@@ -516,7 +516,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h2>Análises - partidos mais parecidos</h2>
-                    <div id="partidos_d3" class="col-lg-7" style="background-color:white;margin:0;padding-left:0;padding-right: 110px;"></div>
+                    <div id="partidos_d3" class="col-lg-7 hidden-xs" style="background-color:white;margin:0;padding:0;margin-right:0;padding-right:0;"></div>
+                    <img src="img/partidos_similares.png" class="visible-xs" title="Partidos similares">
+                    <b class="visible-xs">*Caso queira usar a versão interativa basta usar uma tela maior</b>
+
                 <div class="col-lg-5">
                     <h3>Como o grafico foi feito?</h3>
                     <ul>
@@ -747,7 +750,7 @@
     <script src="lib/controllers.js"></script>
     <script>
 
-    var width = 500,
+    var width = 700,
         height = 600
 
     var svg = d3.select("#partidos_d3").append("svg")
@@ -780,7 +783,7 @@
           .call(force.drag);
 
         node.append("circle")
-          .attr("r", 5)
+          .attr("r", 6)
           .attr("fill", function(d) { return d.group; })
 
       node.append("text")
