@@ -533,7 +533,7 @@
 
                     <h3>Discussão</h3>
 
-                    Dá para notar claramente 4 grupos:
+                    Dá para notar claramente 5 grupos:
                     <ol>
                         <li>
                             <b><u> O grupo da esquerda (vermelho)</u></b>, formado pelo PT, Rede, PSOL, PCdoB e PDT. Este grupo está desconectado
@@ -545,13 +545,17 @@
                             votam de forma quase igual
                         </li>
                         <li>
-                            <b><u> O grupo preto é o grupo formado pelo PMDB </u></b>.
+                            <b><u> O grupo laranja é o grupo formado pelo PMDB </u></b>.
                         </li>
                         <li>
                             <b><u> O grupo azul é o grupo do PSDB</u></b> (junto com solidariedade e DEM). Como em boa parte do período
                             2015-2018 o PSDB foi oposição, enquanto o PMDB era situação, ele está um pouco afastado do
                             grupo do PMDB. O partido que "conecta" os dois grupos é o DEM.
                         </li>
+                        <li>
+                            Os partidos em preto são os que <b><u>não tiveram concordância de pelo menos 75% das votações com nenhum outro partido </u></b>.
+                        </li>
+
                     </ol>
 
 
@@ -759,8 +763,8 @@
 
     var force = d3.layout.force()
         <!--.gravity(0.10)-->
-        .distance(60)
-        .charge(-450)
+        .distance(50)
+        .charge(-400)
         .size([width, height]);
 
     d3.json("dados/data.json", function(error, json) {
