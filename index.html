@@ -149,7 +149,7 @@
                     <br>
                     <br>
                     <div style="font-size: 20px">
-                        <b> Novidade: <a href="#analysis"><u>Analises - Quais partidos mais parecidos?</u></a>
+                        <b> Novidade: <a href="#deputies_diff"><u>Analises - Quais deputados mais diferentes do seu partido?</u></a>
                         </b> <span class="glyphicon glyphicon-hand-left blink"></span>
                     </div>
                     <br>
@@ -510,16 +510,17 @@
 
 
     <hr>
-    <!-- About Calculo -->
+
+    <!-- About Analysis -->
     <section id="analysis" class="top-buffer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-7">
                     <h2>Análises - partidos mais parecidos</h2>
-                    <div id="partidos_d3" class="col-lg-7 hidden-xs" style="background-color:white;margin:0;padding:0;margin-right:0;padding-right:0;"></div>
+                    <div id="partidos_d3" class="col-lg-12 hidden-xs" style="background-color:white;margin:0;padding:0;margin-right:0;padding-right:0;"></div>
                     <img src="img/partidos_similares.png" class="visible-xs" title="Partidos similares" style="max-width: 100%;height: auto;">
                     <b class="visible-xs">*Caso queira usar a versão interativa basta usar uma tela maior</b>
-
+                </div>
                 <div class="col-lg-5 col-xs-12">
                     <h3>Como o grafico foi feito?</h3>
                     <ul>
@@ -562,8 +563,96 @@
                 </div>
 
             </div>
-            <div class="row">
+        </div>
+    </section>
 
+    <hr>
+
+<!-- About Deputies Similarity -->
+    <section id="deputies_diff" class="top-buffer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <h3>Deputados mais diferentes do seu partido</h3>
+                    <h4>(Filtre por Estado, Partido ou pelo nome)</h4>
+
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <h3>Estado:
+                                    <select  ng-model="estadoSelecionadoDepSim" class="form-control"
+                                             ng-options="estado.uf for estado in estados">                                         " >
+                                        <option value="">TODOS</option>
+                                    </select>
+                                </h3>
+                            </div>
+                            <div class="form-group">
+                                <h3>Partido:
+                                    <select  ng-model="partidoSelecionadoDepSim" class="form-control"
+                                             ng-options="partido.partido | uppercase for partido in partidos">
+                                        <option value="">TODOS</option>
+                                    </select>
+                                </h3>
+                            </div>
+                            <div class="form-group">
+                                <h3>Nome:
+                                    <input ng-model="searchDepSim.nome" class="form-control">
+                                </h3>
+                            </div>
+                            <div class="form-group">
+                                <h3>Deputados : {{deput_sim_filtrados.length}}</h3>
+                            </div>
+                        </form>
+
+                        <br>
+                        <div class="list-group">
+
+                            <div ng-if="deput_sim_filtrados.length == 0">
+                                <h2> Nenhum deputado selecionado. </h2>
+                            </div>
+                            <div class="row" ng-repeat="deputado in (deput_sim_filtrados =
+                            (deputado_partido_similaridade | orderBy:['similaridade','nome']
+                            | filter:estadoSelecionadoDepSim  | filter:partidoSelecionadoDepSim:true
+                            | filter:searchDepSim)
+                            | startFromDepSim:(currentPageDepSim-1):this| limitTo:pageSizeDepSim)">
+
+                                <div class="col-lg-5 text-left">
+
+                                    <span class="badge">{{deputado.partido | uppercase}}/{{deputado.uf}}</span>
+                                    <label>
+                                        {{deputado.nome}}
+                                    </label>
+                                </div>
+
+                                <div class="col-lg-7 text-left" ng-if="deputado.similaridade >= 0">
+                                    <div class="col-xs-11 text-left" ng-if="deputado.similaridade >= 0">
+                                        <progressbar value="deputado.similaridade" type="{{typeProgessBar(deputado.similaridade)}}">
+                                <span style="color:white; white-space:nowrap;">
+                                     <strong>
+                                         {{deputado.similaridade  | number : 2 }}%
+                                     </strong>
+                                </span></progressbar>
+                                    </div>
+                                </div>
+
+                                </div>
+                                <pagination total-items="totalItemsDepSim" items-per-page="pageSizeDepSim" ng-model="currentPageDepSim"
+                                        class="pagination-sm" boundary-links="true" max-size="5" first-text="Início" last-text="Fim"
+                                        previous-text="Ant." next-text="Próx." rotate="false"></pagination>
+
+                            </div>
+
+                </div>
+                <div class="col-lg-5">
+                    <h3>Comparaçao deputados x partido atual</h3>
+                    <h5>Comparando a votaçao dos deputados com a orientaçao do partido atual dos mesmos (lembrando que
+                    existem varias trocas de partido): </h5>
+                    <ul>
+                        <li>37% dos deputados votaram igual ao seu partido atual </li>
+                        <li>64% dos deputados votaram igual ao seu partido em 85% das votaçoes </li>
+                    </ul>
+                    <img src="{{'img/deputados_partidos.png'}}" width="500">
+
+                </div>
             </div>
         </div>
     </section>
