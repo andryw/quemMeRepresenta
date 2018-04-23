@@ -572,9 +572,21 @@
     <section id="deputies_diff" class="top-buffer">
         <div class="container">
             <div class="row">
+                                <div class="col-lg-5">
+                    <h3>Comparaçao deputados x partido atual</h3>
+                    <h5>Comparando a votaçao dos deputados com a orientaçao do partido atual dos mesmos (lembrando que
+                    existem varias trocas de partido): </h5>
+                    <ul>
+                        <li>37% dos deputados votaram igual ao seu partido atual </li>
+                        <li>64% dos deputados votaram igual ao seu partido em 85% das votaçoes </li>
+                    </ul>
+                    <img src="{{'img/deputados_partidos.png'}}" width="450">
+
+                </div>
+
                 <div class="col-lg-7">
-                    <h3>Deputados mais diferentes do seu partido</h3>
-                    <h4>(Filtre por Estado, Partido ou pelo nome)</h4>
+                    <h3>Pesquise quais deputados votaram mais diferente que o seu partido atual</h3>
+                    <h4>(Filtre por Estado, Partido ou pelo nome do deputado)</h4>
 
                         <form class="form-inline">
                             <div class="form-group">
@@ -594,12 +606,9 @@
                                 </h3>
                             </div>
                             <div class="form-group">
-                                <h3>Nome:
+                                <h3>Nome do deputado:
                                     <input ng-model="searchDepSim.nome" class="form-control">
                                 </h3>
-                            </div>
-                            <div class="form-group">
-                                <h3>Deputados : {{deput_sim_filtrados.length}}</h3>
                             </div>
                         </form>
 
@@ -640,17 +649,6 @@
                                         previous-text="Ant." next-text="Próx." rotate="false"></pagination>
 
                             </div>
-
-                </div>
-                <div class="col-lg-5">
-                    <h3>Comparaçao deputados x partido atual</h3>
-                    <h5>Comparando a votaçao dos deputados com a orientaçao do partido atual dos mesmos (lembrando que
-                    existem varias trocas de partido): </h5>
-                    <ul>
-                        <li>37% dos deputados votaram igual ao seu partido atual </li>
-                        <li>64% dos deputados votaram igual ao seu partido em 85% das votaçoes </li>
-                    </ul>
-                    <img src="{{'img/deputados_partidos.png'}}" width="500">
 
                 </div>
             </div>
