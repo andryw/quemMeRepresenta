@@ -1,5 +1,11 @@
 [
   {
+    "Tema":"PEC do teto dos gastos",
+    "Pergunta":"PEC do teto dos gastos?",
+    "descr":"A Emenda Constitucional 95 tem como objetivo evitar que o gasto público federal cresça mais que a inflação.",
+    "id":"25"
+  },
+  {
     "Tema":"Prosseguimento da 2ª denúncia contra Temer",
     "Pergunta":"prosseguimento da 2ª denúncia contra o Temer?",
     "descr":"Prosseguimento da 2ª denúncia onde o Michel Temer é acusado de corrução passiva pelo Janot.",
