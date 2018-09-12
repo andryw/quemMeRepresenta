@@ -1,0 +1,68 @@
+[
+	{
+		"candidato": "Álvaro dias",
+		"partido": "podemos",
+		"coligação": ["podemos", "psc", "prp", "ptc"]
+	},
+	{
+		"candidato": "Cabo Daciolo",
+		"partido": "patriotas",
+		"coligação": ["patriotas"]
+	},
+	{
+		"candidato": "Ciro Gomes",
+		"partido": "pdt",
+		"coligação": ["pdt", "avante"]
+	},
+	{
+		"candidato": "Geraldo Alckmin",
+		"partido": "psdb",
+		"coligação": ["psdb", "pp", "ptb", "psd", "solidaried", "prb", "dem", "pps", "pr"]
+	},
+	{
+		"candidato": "Guilherme Boulos",
+		"partido": "psol",
+		"coligação": ["psol", "pcb"]
+	},
+	{
+		"candidato": "Henrique Meirelles",
+		"partido": "mdb",
+		"coligação": ["mdb", "phs"]
+	},
+	{
+		"candidato": "Jair Bolsonaro",
+		"partido": "psl",
+		"coligação": ["psl", "prtb"]
+	},
+	{
+		"candidato": "João Amoêdo",
+		"partido": "novo",
+		"coligação": ["novo"]
+	},
+	{
+		"candidato": "João Goulart Filho",
+		"partido": "ppl",
+		"coligação": ["ppl"]
+	},
+	{
+		"candidato": "José Maria Eymael",
+		"partido": "dc",
+		"coligação": ["dc"]
+	},
+	{
+		"candidato": "Fernando Haddad",
+		"partido": "pt",
+		"coligação": ["pt", "pros", "pcdob"]
+	},
+	{
+		"candidato": "Marina Silva",
+		"partido": "rede",
+		"coligação": ["rede", "pv"]
+	},
+	{
+		"candidato": "Vera Lúcia",
+		"partido": "pstu",
+		"coligação": ["pstu"]
+	}
+
+]

@@ -149,7 +149,7 @@
                     <br>
                     <br>
                     <div style="font-size: 20px">
-                        <b> Novidade: <a href="#deputados_partidos"><u>Comparação entre votos dos deputados X orientação do seu partido atual</u></a>
+                        <b> Novidade: Partidos dos presidenciáveis
                         </b> <span class="glyphicon glyphicon-hand-left blink"></span>
                     </div>
                     <br>
@@ -279,6 +279,73 @@
 
 
                     <tabset class="col-sm-7" id="deputados">
+                        <tab>
+                            <tab-heading>
+                                <h3 class="h-sempadding">Partidos dos presidenciáveis</h3>
+                            </tab-heading>
+                            <div id="partidos_predidenciaveis">
+                                <form class="form-inline">
+                                    <div>
+                                        OBS: os partidos dos demais candidatos (NOVO, PSTU, etc.) não possuíram deputados na Câmara durante o período de 2015 - 2018
+                                    </div>
+
+                                </form>
+
+                                <br>
+                                <div class="list-group">
+
+                                    <div class="row" ng-repeat="partido in (partido_filtrados =
+                                        (partidos_votos | orderBy:['-score','-sum','partido']
+                                        | hasPresidenciavel:this))">
+
+                                        <div class="col-lg-5 text-left">
+
+                                            <label>
+                                                {{"[" + partido.nome + "] " + presidenciavel_pelo_partido(partido.nome) | uppercase}}
+                                                <a href=""
+                                                ng-click="votos_deputados(partido,'Partido')">
+                                                <span class="glyphicon glyphicon-info-sign"></span>
+                                                </a>
+
+                                            </label>
+
+
+                                        </div>
+
+                                        <div class="col-lg-7 text-left" ng-if="partido.score >= 0">
+                                            <div class="col-xs-10 text-left">
+
+                                                <progressbar value="partido.score" type="{{typeProgessBar(partido.score)}}"
+                                                             tooltip-html-unsafe="{{getTooltipProgressBar(partido)}}"
+                                                                    popover-trigger="mouseenter">
+                                                    <span style="color:white; white-space:nowrap;">
+                                                         <strong>
+                                                             {{partido.score | number : 2 }}%
+                                                         </strong>
+                                                    </span>
+                                                </progressbar>
+                                            </div>
+
+                                            <div class="col-xs-1 text-left">
+                                            <span class="badge" ng-class="'progress-bar-'+typeProgessBar(partido.score)"
+                                                  tooltip-html-unsafe="{{tooltipBadgeText(partido,'partido')}}"
+                                                  tooltip-placement="{{getTooltipPlacement()}}">
+                                            {{partido.sum + "/" + partido.total}}
+                                            </span>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-lg-7 text-left" ng-if="partido.score < 0" style="padding-bottom:10px">
+                                            <span class="badge progress-bar-danger" tooltip="{{tooltip_semvalorP}}"  tooltip-placement="{{getTooltipPlacementRight()}}">
+                                                Sem Valor
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </tab>
+
                         <tab>
                             <tab-heading>
                                 <h3 class="h-sempadding">Deputados</h3>
@@ -498,6 +565,7 @@
                                 </div>
                             </div>
                         </tab>
+
                     </tabset>
 
 
